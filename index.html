@@ -8,7 +8,7 @@
 
 <title>Ananda Murti Batista Moreira | Backend Engineer</title>
 
-<meta name="description" content="Backend Engineer focused on AI automation systems, intelligent workflows, Python backend development, and backend systems.">
+<meta name="description" content="Backend Engineer focused on AI automation systems, intelligent workflows, and Python backend development.">
 
 <meta property="og:title" content="Ananda Murti Batista Moreira | Backend Engineer">
 <meta property="og:description" content="Backend Engineer specializing in AI automation systems and backend platforms.">
@@ -57,13 +57,13 @@ Backend Engineer • AI Automation • Intelligent Systems
 
 </footer>
 
-<script type="module">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js';
+<script>
 
-async function loadCV(){
+async function loadCV() {
 
-const response = await fetch('cv.md');
+const response = await fetch("cv.md");
 
 const markdown = await response.text();
 
