@@ -18,9 +18,11 @@ async function loadCV() {
 }
 
 async function loadRepos() {
+
   const container = document.getElementById("repo-grid");
 
   try {
+
     const response = await fetch(
       "https://api.github.com/users/anandamurti/repos?sort=updated&per_page=100"
     );
@@ -57,28 +59,55 @@ async function loadRepos() {
 
     container.innerHTML = finalRepos
       .map((repo) => {
-        const cleanName = repo.name.replace(/-/g, " ");
-        const description = repo.description || "Source code and implementation details available in the repository.";
+
+        const cleanName = repo.name
+          .replace(/-/g, " ")
+          .replace(/_/g, " ");
+
+        const description =
+          repo.description ||
+          "Source code and implementation details available in the repository.";
+
         const language = repo.language || "Code";
 
         return `
           <article class="repo-card">
+
             <h3>
-              <a href="${repo.html_url}" target="_blank" rel="noopener">${cleanName}</a>
+              <a href="${repo.html_url}" target="_blank" rel="noopener">
+                ${cleanName}
+              </a>
             </h3>
+
             <p>${description}</p>
+
             <div class="repo-meta">
-              <span>★ ${repo.stargazers_count}</span>
-              <span>${language}</span>
-              <span>Updated ${new Date(repo.updated_at).toLocaleDateString()}</span>
+
+              <span class="repo-lang">
+                ${language}
+              </span>
+
+              <span class="repo-stars">
+                ★ ${repo.stargazers_count}
+              </span>
+
+              <span class="repo-updated">
+                Updated ${new Date(repo.updated_at).toLocaleDateString()}
+              </span>
+
             </div>
+
           </article>
         `;
       })
       .join("");
+
   } catch (error) {
+
     container.innerHTML = `
-      <div class="loading-card">Unable to load repositories right now.</div>
+      <div class="loading-card">
+        Unable to load repositories right now.
+      </div>
     `;
   }
 }
