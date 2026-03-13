@@ -1,80 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ananda Murti Batista Moreira | Backend Engineer</title>
 
-<meta name="description" content="Backend Engineer focused on AI automation systems, intelligent workflows, and Python backend development.">
+<meta name="description"
+content="Backend Engineer specializing in AI automation, backend systems, and production data workflows.">
 
-<meta property="og:title" content="Ananda Murti Batista Moreira | Backend Engineer">
-<meta property="og:description" content="Backend Engineer specializing in AI automation systems and backend platforms.">
-<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
 
 </head>
 
 <body>
 
-<header class="hero">
+<header class="site-header">
 
-<img src="profile.jpg" class="profile" alt="Ananda Murti Batista Moreira">
+<nav class="nav">
 
-<h1>Ananda Murti Batista Moreira</h1>
+<a class="nav-brand" href="#">AM</a>
 
-<p class="tagline">
-Backend Engineer • AI Automation • Intelligent Systems
-</p>
-
-<div class="buttons">
-
-<a href="resume.pdf">Download CV</a>
-
-<a href="https://github.com/anandamurti" target="_blank">GitHub</a>
-
-<a href="https://linkedin.com/in/ananda-murti-batista-moreira-837576326" target="_blank">LinkedIn</a>
-
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#skills">Stack</a>
+<a href="#projects">Projects</a>
+<a href="#activity">GitHub</a>
+<a href="#cv-section">CV</a>
 </div>
+
+</nav>
 
 </header>
 
-<main class="content">
+<main>
 
-<section id="cv"></section>
+<section class="hero" id="about">
+
+<div class="hero-inner">
+
+<div class="hero-left">
+
+<p class="eyebrow">
+Backend Engineer • AI Automation • Intelligent Systems
+</p>
+
+<h1>
+Building automation systems, intelligent workflows, and production-grade backend platforms.
+</h1>
+
+<p class="hero-text">
+I design Python-based systems for API orchestration, data processing, document automation,
+and production deployment — with a growing focus on AI-assisted systems, retrieval,
+and agentic workflows.
+</p>
+
+<div class="hero-buttons">
+
+<a class="btn btn-primary" href="resume.pdf" target="_blank">
+Download CV
+</a>
+
+<a class="btn btn-secondary"
+href="https://github.com/anandamurti"
+target="_blank">
+GitHub
+</a>
+
+<a class="btn btn-secondary"
+href="https://linkedin.com/in/ananda-murti-batista-moreira-837576326"
+target="_blank">
+LinkedIn
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="profile.jpg" class="profile">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="skills">
+
+<div class="section-header">
+<h2>Technology Stack</h2>
+</div>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+<span>Python</span>
+</div>
+
+<div class="skill-card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg">
+<span>Flask</span>
+</div>
+
+<div class="skill-card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+<span>JavaScript</span>
+</div>
+
+<div class="skill-card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+<span>SQL / MySQL</span>
+</div>
+
+<div class="skill-card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg">
+<span>Linux</span>
+</div>
+
+<div class="skill-card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg">
+<span>Apache</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="projects">
+
+<div class="section-header">
+
+<h2>Projects</h2>
+
+<p class="section-text">
+Selected repositories from GitHub.
+</p>
+
+</div>
+
+<div id="repo-grid" class="repo-grid">
+
+<div class="loading-card">
+Loading projects...
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="activity">
+
+<div class="section-header">
+<h2>GitHub Activity</h2>
+</div>
+
+<div class="activity-card">
+
+<img
+class="contrib-graph"
+src="https://ghchart.rshah.org/2563eb/anandamurti"
+alt="GitHub contribution graph">
+
+</div>
+
+</section>
+
+<section class="section" id="cv-section">
+
+<div class="section-header">
+<h2>Curriculum Vitae</h2>
+</div>
+
+<article id="cv" class="cv-card"></article>
+
+</section>
 
 </main>
 
-<footer>
-
+<footer class="footer">
 <p>© 2026 Ananda Murti Batista Moreira</p>
-
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-<script>
-
-async function loadCV() {
-
-const response = await fetch("cv.md");
-
-const markdown = await response.text();
-
-document.getElementById("cv").innerHTML = marked.parse(markdown);
-
-}
-
-loadCV();
-
-</script>
+<script src="app.js"></script>
 
 </body>
-
 </html>
