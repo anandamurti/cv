@@ -18,7 +18,9 @@ animation:gradient 20s ease infinite;
 }
 
 
+/* ============================= */
 /* NAVBAR */
+/* ============================= */
 
 .navbar{
 display:flex;
@@ -58,7 +60,9 @@ opacity:1;
 }
 
 
+/* ============================= */
 /* HERO */
+/* ============================= */
 
 .hero{
 text-align:center;
@@ -87,7 +91,9 @@ font-size:18px;
 }
 
 
+/* ============================= */
 /* BUTTONS */
+/* ============================= */
 
 .buttons{
 margin-top:30px;
@@ -111,7 +117,9 @@ background:#3b82f6;
 }
 
 
+/* ============================= */
 /* SECTIONS */
+/* ============================= */
 
 .section{
 max-width:1100px;
@@ -120,12 +128,20 @@ padding:80px 20px;
 }
 
 .section h2{
-margin-bottom:40px;
+margin-bottom:20px;
 font-size:28px;
 }
 
+.section-intro{
+color:#94a3b8;
+margin-bottom:40px;
+max-width:700px;
+}
 
+
+/* ============================= */
 /* STACK GRID */
+/* ============================= */
 
 .stack-grid{
 display:grid;
@@ -133,29 +149,68 @@ grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
 gap:20px;
 }
 
+/* card */
+
 .stack-card{
 background:rgba(255,255,255,0.05);
-padding:20px;
+padding:25px;
 border-radius:10px;
 text-align:center;
 backdrop-filter:blur(8px);
 border:1px solid rgba(255,255,255,0.08);
-transition:.2s;
+transition:.25s;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
 }
+
+/* icon */
 
 .stack-card i{
-font-size:22px;
-margin-bottom:10px;
-display:block;
+font-size:30px;
+color:#60a5fa;
+transition:.25s;
+animation:iconGlow 4s ease-in-out infinite;
 }
+
+/* label */
+
+.stack-card span{
+font-weight:600;
+}
+
+/* hover */
 
 .stack-card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 border-color:#2563eb;
+box-shadow:0 10px 25px rgba(37,99,235,0.25);
+}
+
+.stack-card:hover i{
+transform:scale(1.15);
+color:#93c5fd;
+}
+
+/* glow animation */
+
+@keyframes iconGlow{
+0%{
+text-shadow:0 0 4px rgba(96,165,250,0.4);
+}
+50%{
+text-shadow:0 0 12px rgba(96,165,250,0.8);
+}
+100%{
+text-shadow:0 0 4px rgba(96,165,250,0.4);
+}
 }
 
 
+/* ============================= */
 /* PRODUCTION SYSTEMS */
+/* ============================= */
 
 .prod-grid{
 display:grid;
@@ -187,7 +242,9 @@ color:#cbd5f5;
 }
 
 
+/* ============================= */
 /* GITHUB REPOS */
+/* ============================= */
 
 .repo-grid{
 display:grid;
@@ -226,7 +283,9 @@ font-size:14px;
 }
 
 
+/* ============================= */
 /* REPO META */
+/* ============================= */
 
 .repo-meta{
 display:flex;
@@ -237,9 +296,6 @@ font-size:12px;
 align-items:center;
 }
 
-
-/* LANGUAGE BADGE */
-
 .repo-lang{
 background:rgba(59,130,246,0.2);
 padding:4px 8px;
@@ -248,62 +304,18 @@ color:#3b82f6;
 font-weight:600;
 }
 
-
-/* STAR COUNT */
-
 .repo-stars{
 color:#facc15;
 font-weight:600;
 }
-
-
-/* UPDATE DATE */
 
 .repo-updated{
 color:#94a3b8;
 }
 
 
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px 20px;
-color:#94a3b8;
-font-size:14px;
-}
-
-
-/* MOBILE */
-
-@media (max-width:700px){
-
-.navbar{
-padding:20px;
-}
-
-.nav-links{
-gap:14px;
-font-size:14px;
-}
-
-.hero{
-padding-top:80px;
-}
-
-.hero h1{
-font-size:30px;
-}
-
-.section{
-padding:60px 20px;
-}
-
-}
-
-
 /* ============================= */
-/* SYSTEM ARCHITECTURE SECTION */
+/* SYSTEM ARCHITECTURE */
 /* ============================= */
 
 .architecture-grid{
@@ -329,4 +341,61 @@ font-family:monospace;
 color:#cbd5f5;
 line-height:1.6;
 overflow-x:auto;
+}
+
+
+/* ============================= */
+/* CV SECTION */
+/* ============================= */
+
+#cv{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+color:#cbd5f5;
+line-height:1.7;
+}
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer{
+text-align:center;
+padding:40px 20px;
+color:#94a3b8;
+font-size:14px;
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width:700px){
+
+.navbar{
+padding:20px;
+}
+
+.nav-links{
+gap:14px;
+font-size:14px;
+}
+
+.hero{
+padding-top:80px;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.section{
+padding:60px 20px;
+}
+
 }
