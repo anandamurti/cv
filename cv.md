@@ -1,145 +1,110 @@
 # ANANDA MOREIRA
 
-**Backend Engineer | AI Automation Systems | Python Developer**
+**Backend Engineer | AI Automation | Python Systems**
 
 Rio de Janeiro, Brazil  
 +55 12 99120-5669  
 anandaanandamurti@gmail.com  
 [LinkedIn](https://linkedin.com/in/ananda-murti-batista-moreira-837576326)  
-[GitHub](https://github.com/anandamurti)
+[GitHub](https://github.com/anandamurti)  
 Portfolio: https://anandamurti.github.io/cv/
 
 ---
 
-## CORE FOCUS
+## WORK
 
-Backend systems for automation, data processing, and intelligent workflows.
-
-- AI-assisted automation systems
-- Information retrieval and search platforms
-- API integrations and data pipelines
-- Financial and insurance workflow automation
-- Linux-based production deployments
-
----
-
-## OVERVIEW
-
-Backend engineer specializing in **AI-driven automation systems, intelligent data workflows, and production backend platforms**. Experienced in designing and maintaining Python applications that integrate APIs, process structured and semi-structured data, and automate complex operational processes.
-
-Built and deployed multiple **production automation platforms** used in financial and insurance workflows, including API-driven insurance calculation systems, financial data processing pipelines, and document automation tools. Experience spans the full software lifecycle, including architecture design, backend development, Linux deployment, and long-term production maintenance.
-
-Currently expanding into **AI-assisted systems, information retrieval engines, and intelligent automation architectures**, applying modern indexing, ranking, and data processing techniques to build scalable decision-support software.
-
----
-
-# PROFESSIONAL EXPERIENCE
-
-## Backend Developer — Automation Systems
-
-**LCPT Sistemas I** | Rio de Janeiro  
+### Backend Developer  
+**LCPT Sistemas I** — Rio de Janeiro  
 Oct 2024 – Present
 
-Design and maintain backend platforms and automation systems supporting financial and insurance operations.
+Design and maintain backend platforms supporting financial and insurance operations. Work involves automation systems, API integrations, data pipelines, and production deployments running on Linux infrastructure.
 
-### Production Systems Experience
+#### Insurance Premium Automation Platform
 
-Develop and operate backend systems used in real operational workflows, including insurance processing, accounting automation, and document data pipelines.
+- Built a Python platform that automates insurance premium calculations through insurer APIs.
+- Implemented services for data extraction, validation, normalization, and error handling across multiple insurer formats.
+- Developed automated Excel reporting pipelines used by operational teams and clients.
 
----
+#### Financial Data Systems
 
-### Insurance Premium Calculation Automation Platform
+- Developed Flask web applications deployed on Linux using Apache and mod_wsgi with Microsoft SQL Server databases.
+- Built internal systems allowing accountants to retrieve, filter, and export operational data through secure web interfaces.
+- Implemented validation and filtering pipelines supporting financial workflows.
 
-- Designed and implemented a multi-service Python platform automating insurance premium calculations through external insurer APIs.
-- Built backend services for data extraction, normalization, validation, and error handling across multiple insurer formats.
-- Implemented automated reporting pipelines generating standardized Excel outputs distributed to operational teams and clients.
+#### Document Processing Pipelines
 
----
+- Developed Python systems converting non-searchable PDF portfolios into structured financial datasets.
+- Built a bank statement normalization engine supporting more than 70 banking formats.
+- Implemented deterministic reconciliation tools using rule-based matching and BM25 fuzzy search.
 
-### Financial Data Automation Systems
-
-- Developed Flask web applications deployed on Linux using Apache and mod_wsgi over Microsoft SQL Server databases.
-- Built internal tools enabling accountants to retrieve, filter, and export operational data through secure web interfaces.
-- Implemented data validation and filtering pipelines supporting operational accounting workflows.
-
----
-
-### Document Processing & Data Pipelines
-
-- Developed Python applications converting non-searchable PDF portfolios into structured financial datasets.
-- Built a bank statement normalization system supporting more than 70 banking formats.
-- Designed deterministic reconciliation tools using rule-based matching and BM25 fuzzy search for financial classification.
-
-Responsible for the full lifecycle of these systems, including architecture, development, deployment, monitoring, and long-term production maintenance.
+Responsible for architecture, development, deployment, monitoring, and long-term production maintenance of these systems.
 
 ---
 
-# SYSTEMS & PLATFORMS
+## SOFTWARE SYSTEMS
 
-## Information Retrieval Search Engine
+### Information Retrieval Engine
 
-Designed and implemented a complete **search engine pipeline** in Python.
+Built a complete search engine pipeline in Python.
 
-- Built a web crawler with robots.txt compliance and host-politeness controls
-- Implemented text preprocessing including tokenization, stopword filtering, and Porter stemming
+- Implemented a web crawler with robots.txt compliance and host politeness controls
+- Built preprocessing pipeline including tokenization, stopword filtering, and Porter stemming
 - Designed an inverted index stored in SQLite
-- Implemented TF-IDF document weighting and cosine similarity ranking
-- Developed a CLI search engine returning ranked results from indexed datasets
+- Implemented TF-IDF weighting and cosine similarity ranking
+- Developed CLI search interface returning ranked results from indexed datasets
 
----
+### Confidential Retrieval Platform (Production — NDA)
 
-## Confidential Information Retrieval Platform (Production — NDA)
+Developed a production document retrieval system for a UK diamond industry client.
 
-Developed a production information retrieval system for a UK diamond industry client under NDA.
-
-- Implemented search indexing pipelines for structured and unstructured document retrieval
-- Built ranking logic using vector-space models and document similarity scoring
+- Implemented indexing pipelines for structured and unstructured documents
+- Built ranking logic using vector-space similarity scoring
 - Designed scalable indexing workflows supporting efficient query retrieval
 
 ---
 
-# TECHNICAL CAPABILITIES
+## TECHNOLOGIES
 
-### Programming
+**Programming**  
 Python, SQL, JavaScript, PHP
 
-### Backend & Frameworks
+**Backend Systems**  
 Flask, SQLAlchemy, Flask-WTF, Flask-Bcrypt
 
-### Data & Automation
-Pandas, OpenPyXL, Data normalization pipelines, Document processing
+**Data Processing**  
+Pandas, OpenPyXL, document parsing, data normalization pipelines
 
-### Information Retrieval
-TF-IDF, Cosine Similarity, Inverted Indexes, Tokenization, Stemming
+**Search & Retrieval**  
+TF-IDF, cosine similarity, inverted indexes, tokenization, stemming
 
-### Databases
+**Databases**  
 MySQL, Microsoft SQL Server, SQLite
 
-### Infrastructure & DevOps
-Linux (Ubuntu), Apache2, mod_wsgi, SSL/TLS, Virtual Environments
+**Infrastructure**  
+Linux (Ubuntu), Apache2, mod_wsgi, SSL/TLS, Python virtual environments
 
 ---
 
-# EDUCATION
+## EDUCATION
 
-**Bachelor of Science in Computer Science**  
+Bachelor of Science in Computer Science  
 University of the People — Pasadena, USA  
 2022 – 2026 (In Progress)
 
 ---
 
-# ADDITIONAL TRAINING
+## ADDITIONAL TRAINING
 
-- Diploma in Website Development Using Python & Flask — Alison
+- Website Development with Python & Flask — Alison
 - SQL for Beginners — Alison
-- Analyze Data with Microsoft Excel — Codecademy
-- Front End Development – CSS — Great Learning
+- Data Analysis with Excel — Codecademy
+- Front End Development (CSS) — Great Learning
 - Learn to Program: The Fundamentals — Coursera
-- Certificate of Completion: AI Fluency Framework & Foundations — Anthropic
+- AI Fluency Framework & Foundations — Anthropic
 
 ---
 
-# LANGUAGES
+## LANGUAGES
 
 English  
 Portuguese
