@@ -176,6 +176,95 @@ proprietary datasets.
 </section>
 
 
+<section id="architecture" class="section">
+
+<h2>System Architecture</h2>
+
+<p class="section-intro">
+High-level architecture diagrams illustrating how key backend systems process data,
+integrate external services, and deliver operational outputs.
+</p>
+
+<div class="architecture-grid">
+
+<div class="architecture-card">
+
+<h3>Insurance Automation Platform</h3>
+
+<pre class="architecture-diagram">
+Client System
+      │
+      ▼
+Backend API (Flask)
+      │
+      ├── Insurer API Integration
+      │
+      ▼
+Response Normalization
+      │
+      ▼
+Report Generation
+      │
+      ▼
+Excel Financial Reports
+</pre>
+
+</div>
+
+
+<div class="architecture-card">
+
+<h3>Financial Document Processing Pipeline</h3>
+
+<pre class="architecture-diagram">
+Financial PDFs
+      │
+      ▼
+PDF Extraction Engine
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
+Structured Dataset
+      │
+      ▼
+Reconciliation & Reporting
+</pre>
+
+</div>
+
+
+<div class="architecture-card">
+
+<h3>Information Retrieval Engine</h3>
+
+<pre class="architecture-diagram">
+Document Corpus
+      │
+      ▼
+Crawler / Loader
+      │
+      ▼
+Inverted Index
+      │
+      ▼
+TF-IDF Weighting
+      │
+      ▼
+Cosine Similarity Ranking
+      │
+      ▼
+Search Results
+</pre>
+
+</div>
+
+</div>
+
+</section>
+
+
 <section id="projects" class="section">
 
 <h2>GitHub</h2>
