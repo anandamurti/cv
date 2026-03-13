@@ -36,7 +36,7 @@ backdrop-filter:blur(10px);
 
 .nav-logo{
 font-weight:700;
-font-size:20px;
+font-size:22px;
 }
 
 .nav-links{
@@ -66,14 +66,14 @@ opacity:1;
 
 .hero{
 text-align:center;
-padding:100px 20px 80px 20px;
+padding:80px 20px 60px 20px;
 max-width:900px;
 margin:auto;
 }
 
 .profile{
-width:160px;
-height:160px;
+width:180px;
+height:180px;
 border-radius:50%;
 border:4px solid #2563eb;
 object-fit:cover;
@@ -81,13 +81,15 @@ object-fit:cover;
 
 .hero h1{
 margin-top:20px;
-font-size:38px;
+font-size:52px;
+font-weight:700;
+letter-spacing:-1px;
 }
 
 .tagline{
 color:#94a3b8;
-margin-top:10px;
-font-size:18px;
+margin-top:12px;
+font-size:20px;
 }
 
 
@@ -129,13 +131,19 @@ padding:80px 20px;
 
 .section h2{
 margin-bottom:20px;
-font-size:28px;
+font-size:30px;
 }
 
 .section-intro{
 color:#94a3b8;
 margin-bottom:40px;
 max-width:700px;
+}
+
+#about p{
+font-size:17px;
+line-height:1.8;
+max-width:750px;
 }
 
 
@@ -149,12 +157,10 @@ grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
 gap:20px;
 }
 
-/* card */
-
 .stack-card{
 background:rgba(255,255,255,0.05);
-padding:25px;
-border-radius:10px;
+padding:30px;
+border-radius:12px;
 text-align:center;
 backdrop-filter:blur(8px);
 border:1px solid rgba(255,255,255,0.08);
@@ -162,49 +168,21 @@ transition:.25s;
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:10px;
+gap:12px;
 }
-
-/* icon */
 
 .stack-card i{
-font-size:30px;
-color:#60a5fa;
-transition:.25s;
-animation:iconGlow 4s ease-in-out infinite;
+font-size:48px;
 }
-
-/* label */
 
 .stack-card span{
 font-weight:600;
 }
 
-/* hover */
-
 .stack-card:hover{
 transform:translateY(-6px);
 border-color:#2563eb;
 box-shadow:0 10px 25px rgba(37,99,235,0.25);
-}
-
-.stack-card:hover i{
-transform:scale(1.15);
-color:#93c5fd;
-}
-
-/* glow animation */
-
-@keyframes iconGlow{
-0%{
-text-shadow:0 0 4px rgba(96,165,250,0.4);
-}
-50%{
-text-shadow:0 0 12px rgba(96,165,250,0.8);
-}
-100%{
-text-shadow:0 0 4px rgba(96,165,250,0.4);
-}
 }
 
 
@@ -391,7 +369,7 @@ padding-top:80px;
 }
 
 .hero h1{
-font-size:30px;
+font-size:34px;
 }
 
 .section{
