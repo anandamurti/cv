@@ -1,7 +1,9 @@
 async function loadCV() {
+
   const cvContainer = document.getElementById("cv");
 
   try {
+
     const response = await fetch("./cv.md");
 
     if (!response.ok) {
@@ -9,13 +11,18 @@ async function loadCV() {
     }
 
     const markdown = await response.text();
+
     cvContainer.innerHTML = marked.parse(markdown);
+
   } catch (error) {
+
     cvContainer.innerHTML = `
       <p>Unable to load the CV section right now.</p>
     `;
   }
 }
+
+
 
 async function loadRepos() {
 
@@ -33,6 +40,7 @@ async function loadRepos() {
 
     const repos = await response.json();
 
+
     const preferredOrder = [
       "cv",
       "blog-application-flask",
@@ -42,65 +50,69 @@ async function loadRepos() {
       "Computer-Graphics-Unit-4"
     ];
 
-    const repoMap = new Map(repos.map((repo) => [repo.name, repo]));
+
+    const repoMap = new Map(repos.map(repo => [repo.name, repo]));
+
 
     const selectedRepos = preferredOrder
-      .map((name) => repoMap.get(name))
+      .map(name => repoMap.get(name))
       .filter(Boolean)
-      .filter((repo) => !repo.fork);
+      .filter(repo => !repo.fork);
+
 
     const fallbackRepos = repos
-      .filter((repo) => !repo.fork)
-      .filter((repo) => repo.description || repo.language)
-      .filter((repo) => !preferredOrder.includes(repo.name))
+      .filter(repo => !repo.fork)
+      .filter(repo => repo.description || repo.language)
+      .filter(repo => !preferredOrder.includes(repo.name))
       .slice(0, 6 - selectedRepos.length);
+
 
     const finalRepos = [...selectedRepos, ...fallbackRepos].slice(0, 6);
 
-    container.innerHTML = finalRepos
-      .map((repo) => {
 
-        const cleanName = repo.name
-          .replace(/-/g, " ")
-          .replace(/_/g, " ");
+    container.innerHTML = finalRepos.map(repo => {
 
-        const description =
-          repo.description ||
-          "Source code and implementation details available in the repository.";
+      const cleanName = repo.name
+        .replace(/-/g, " ")
+        .replace(/_/g, " ");
 
-        const language = repo.language || "Code";
+      const description =
+        repo.description ||
+        "Source code and implementation details available in the repository.";
 
-        return `
-          <article class="repo-card">
+      const language = repo.language || "Code";
 
-            <h3>
-              <a href="${repo.html_url}" target="_blank" rel="noopener">
-                ${cleanName}
-              </a>
-            </h3>
+      return `
+        <article class="repo-card">
 
-            <p>${description}</p>
+          <h3>
+            <a href="${repo.html_url}" target="_blank" rel="noopener">
+              ${cleanName}
+            </a>
+          </h3>
 
-            <div class="repo-meta">
+          <p>${description}</p>
 
-              <span class="repo-lang">
-                ${language}
-              </span>
+          <div class="repo-meta">
 
-              <span class="repo-stars">
-                ★ ${repo.stargazers_count}
-              </span>
+            <span class="repo-lang">
+              ${language}
+            </span>
 
-              <span class="repo-updated">
-                Updated ${new Date(repo.updated_at).toLocaleDateString()}
-              </span>
+            <span class="repo-stars">
+              ★ ${repo.stargazers_count}
+            </span>
 
-            </div>
+            <span class="repo-updated">
+              Updated ${new Date(repo.updated_at).toLocaleDateString()}
+            </span>
 
-          </article>
-        `;
-      })
-      .join("");
+          </div>
+
+        </article>
+      `;
+
+    }).join("");
 
   } catch (error) {
 
@@ -112,5 +124,11 @@ async function loadRepos() {
   }
 }
 
-loadCV();
-loadRepos();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  loadCV();
+  loadRepos();
+
+});
