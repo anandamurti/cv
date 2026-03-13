@@ -17,9 +17,14 @@ async function loadCV() {
   } catch (error) {
 
     cvContainer.innerHTML = `
-      <p>Unable to load the CV section right now.</p>
+      <div class="loading-card">
+        <p>CV content could not be loaded.</p>
+        <p>Please check the repository for the latest version.</p>
+      </div>
     `;
+
   }
+
 }
 
 
@@ -41,6 +46,7 @@ async function loadRepos() {
     const repos = await response.json();
 
 
+
     const preferredOrder = [
       "cv",
       "blog-application-flask",
@@ -51,7 +57,11 @@ async function loadRepos() {
     ];
 
 
-    const repoMap = new Map(repos.map(repo => [repo.name, repo]));
+
+    const repoMap = new Map(
+      repos.map(repo => [repo.name, repo])
+    );
+
 
 
     const selectedRepos = preferredOrder
@@ -60,29 +70,48 @@ async function loadRepos() {
       .filter(repo => !repo.fork);
 
 
+
     const fallbackRepos = repos
       .filter(repo => !repo.fork)
       .filter(repo => repo.description || repo.language)
       .filter(repo => !preferredOrder.includes(repo.name))
-      .slice(0, 6 - selectedRepos.length);
+      .slice(0, 8 - selectedRepos.length);
 
 
-    const finalRepos = [...selectedRepos, ...fallbackRepos].slice(0, 6);
+
+    const finalRepos = [...selectedRepos, ...fallbackRepos].slice(0, 8);
+
 
 
     container.innerHTML = finalRepos.map(repo => {
 
       const cleanName = repo.name
-        .replace(/-/g, " ")
-        .replace(/_/g, " ");
+        .replace(/[-_]/g, " ")
+        .replace(/\b\w/g, l => l.toUpperCase());
+
+
 
       const description =
         repo.description ||
         "Source code and implementation details available in the repository.";
 
+
+
       const language = repo.language || "Code";
 
+
+
+      const updatedDate = new Date(repo.updated_at)
+        .toLocaleDateString(undefined, {
+          year: "numeric",
+          month: "short",
+          day: "numeric"
+        });
+
+
+
       return `
+
         <article class="repo-card">
 
           <h3>
@@ -104,24 +133,29 @@ async function loadRepos() {
             </span>
 
             <span class="repo-updated">
-              Updated ${new Date(repo.updated_at).toLocaleDateString()}
+              Updated ${updatedDate}
             </span>
 
           </div>
 
         </article>
+
       `;
 
     }).join("");
+
+
 
   } catch (error) {
 
     container.innerHTML = `
       <div class="loading-card">
-        Unable to load repositories right now.
+        Unable to load repositories at the moment.
       </div>
     `;
+
   }
+
 }
 
 

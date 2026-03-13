@@ -8,11 +8,8 @@
 
 <title>Ananda Moreira | Backend Engineer</title>
 
-<meta name="description" content="Backend Engineer building AI automation systems, backend platforms, and intelligent data workflows.">
-
 <link rel="stylesheet" href="styles.css">
 
-<!-- Devicon official technology icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
 </head>
@@ -36,6 +33,7 @@
 </nav>
 
 
+
 <header class="hero">
 
 <div class="hero-background"></div>
@@ -51,7 +49,7 @@ Backend Engineer • AI Automation • Python Systems
 </p>
 
 <p class="hero-desc">
-Building automation systems, intelligent workflows, and production backend platforms.
+Building automation systems, intelligent workflows, and production backend platforms focused on financial automation, API orchestration, and intelligent data processing.
 </p>
 
 <div class="buttons">
@@ -69,16 +67,42 @@ Building automation systems, intelligent workflows, and production backend platf
 </header>
 
 
+
 <section id="about" class="section">
 
 <h2>About</h2>
 
-<p>
-Backend engineer focused on building automation systems, intelligent workflows,
-and production-grade backend platforms. My work centers on Python-based systems
-that integrate external APIs, process operational data, and automate financial
-and document-driven workflows.
+<p class="section-intro">
+
+Backend engineer designing production automation systems used in financial and insurance workflows.  
+My work focuses on Python backend services that integrate APIs, process financial data, automate document workflows, and support operational reporting.
+
 </p>
+
+<div class="about-grid">
+
+<div class="about-card">
+<h3>Automation Systems</h3>
+<p>
+Backend platforms automating insurance premium calculations, client reporting, and operational workflows through integrated API services.
+</p>
+</div>
+
+<div class="about-card">
+<h3>Data Pipelines</h3>
+<p>
+Financial document processing systems converting PDFs, bank statements, and accounting extracts into structured datasets for reconciliation and reporting.
+</p>
+</div>
+
+<div class="about-card">
+<h3>Information Retrieval</h3>
+<p>
+Search engines and document indexing pipelines using inverted indexes, TF-IDF ranking, and cosine similarity for efficient information retrieval.
+</p>
+</div>
+
+</div>
 
 </section>
 
@@ -102,7 +126,7 @@ and document-driven workflows.
 
 <div class="stack-card">
 <i class="devicon-mysql-plain colored"></i>
-<span>SQL</span>
+<span>SQL / MySQL</span>
 </div>
 
 <div class="stack-card">
@@ -113,6 +137,11 @@ and document-driven workflows.
 <div class="stack-card">
 <i class="devicon-javascript-plain colored"></i>
 <span>JavaScript</span>
+</div>
+
+<div class="stack-card">
+<i class="devicon-apache-plain colored"></i>
+<span>Apache</span>
 </div>
 
 <div class="stack-card">
@@ -131,49 +160,76 @@ and document-driven workflows.
 <h2>Production Systems</h2>
 
 <p class="section-intro">
-Platforms and backend workflows designed for real operational use.
+Engineering systems designed, deployed, and maintained for real operational use.
 </p>
 
 <div class="prod-grid">
+
 
 <div class="glass-card">
 
 <h3>Insurance Premium Automation Platform</h3>
 
 <p>
-Backend platform integrating insurer APIs to automate premium calculations,
-normalize insurer responses, and generate standardized Excel reports used
-in operational insurance workflows.
+Multi-service backend system integrating external insurer APIs to automate insurance premium calculations, normalize responses, and generate standardized Excel reports delivered to clients.
 </p>
 
 </div>
-
 
 
 <div class="glass-card">
 
-<h3>Financial Document Processing Pipeline</h3>
+<h3>Financial Data Automation Platform</h3>
 
 <p>
-Data processing pipeline converting non-searchable financial PDFs
-into structured datasets used for reconciliation and financial reporting.
+Flask web applications deployed on Linux using Apache and mod_wsgi over Microsoft SQL Server databases, enabling accountants to retrieve and export operational financial data through secure interfaces.
 </p>
 
 </div>
-
 
 
 <div class="glass-card">
 
-<h3>Information Retrieval Engine</h3>
+<h3>Document Processing Pipeline</h3>
 
 <p>
-Search platform implementing crawling, inverted indexing,
-TF-IDF weighting, and cosine similarity ranking for document retrieval.
+Python systems converting non-searchable financial portfolios into structured documents and datasets used for reconciliation, classification, and reporting workflows.
 </p>
 
 </div>
 
+
+<div class="glass-card">
+
+<h3>Bank Statement Normalization System</h3>
+
+<p>
+Data pipeline supporting more than 70 bank statement formats, transforming raw extracts into standardized financial data structures for downstream accounting automation.
+</p>
+
+</div>
+
+
+<div class="glass-card">
+
+<h3>Data Reconciliation Engine</h3>
+
+<p>
+Python utilities reconciling bank extracts against portfolio data using deterministic matching rules and BM25-based fuzzy text matching to generate auditable financial reports.
+</p>
+
+</div>
+
+
+<div class="glass-card">
+
+<h3>Information Retrieval Search Engine</h3>
+
+<p>
+Search platform implementing crawling, tokenization, inverted indexing, TF-IDF document weighting, and cosine similarity ranking for efficient document retrieval.
+</p>
+
+</div>
 
 
 <div class="glass-card">
@@ -181,11 +237,11 @@ TF-IDF weighting, and cosine similarity ranking for document retrieval.
 <h3>Confidential Retrieval Platform</h3>
 
 <p>
-Production document retrieval system developed under NDA
-for a UK diamond industry client supporting similarity search.
+Production document retrieval system developed for a UK diamond industry client supporting indexing, ranking, and document similarity search across proprietary datasets.
 </p>
 
 </div>
+
 
 </div>
 
@@ -222,7 +278,7 @@ Loading CV...
 <h2>System Architecture</h2>
 
 <p class="section-intro">
-High-level architecture diagrams illustrating backend workflows.
+High-level architecture diagrams illustrating backend workflows used in production systems.
 </p>
 
 <div class="architecture-grid">
@@ -233,18 +289,18 @@ High-level architecture diagrams illustrating backend workflows.
 <h3>Insurance Automation Platform</h3>
 
 <pre class="architecture-diagram">
-Client
-   │
-   ▼
+Client System
+      │
+      ▼
 Backend API (Flask)
-   │
-   ▼
+      │
+      ▼
 Insurer APIs
-   │
-   ▼
+      │
+      ▼
 Response Normalization
-   │
-   ▼
+      │
+      ▼
 Excel Reports
 </pre>
 
@@ -257,18 +313,18 @@ Excel Reports
 
 <pre class="architecture-diagram">
 Financial PDFs
-   │
-   ▼
+      │
+      ▼
 PDF Extraction
-   │
-   ▼
+      │
+      ▼
 Data Cleaning
-   │
-   ▼
+      │
+      ▼
 Structured Dataset
-   │
-   ▼
-Financial Reports
+      │
+      ▼
+Reporting Systems
 </pre>
 
 </div>
@@ -279,18 +335,18 @@ Financial Reports
 <h3>Information Retrieval Engine</h3>
 
 <pre class="architecture-diagram">
-Documents
-   │
-   ▼
+Document Corpus
+      │
+      ▼
 Crawler
-   │
-   ▼
+      │
+      ▼
 Inverted Index
-   │
-   ▼
+      │
+      ▼
 TF-IDF Ranking
-   │
-   ▼
+      │
+      ▼
 Search Results
 </pre>
 
