@@ -1,74 +1,86 @@
-async function loadCV(){
+async function loadCV() {
+  const cvContainer = document.getElementById("cv");
 
-try{
+  try {
+    const response = await fetch("./cv.md");
 
-const response = await fetch("./cv.md");
+    if (!response.ok) {
+      throw new Error("CV file not found");
+    }
 
-const markdown = await response.text();
-
-document.getElementById("cv").innerHTML = marked.parse(markdown);
-
-}catch(err){
-
-document.getElementById("cv").innerHTML =
-"<p>Unable to load CV.</p>";
-
+    const markdown = await response.text();
+    cvContainer.innerHTML = marked.parse(markdown);
+  } catch (error) {
+    cvContainer.innerHTML = `
+      <p>Unable to load the CV section right now.</p>
+    `;
+  }
 }
 
-}
+async function loadRepos() {
+  const container = document.getElementById("repo-grid");
 
-async function loadRepos(){
+  try {
+    const response = await fetch(
+      "https://api.github.com/users/anandamurti/repos?sort=updated&per_page=100"
+    );
 
-const container = document.getElementById("repo-grid");
+    if (!response.ok) {
+      throw new Error("GitHub API request failed");
+    }
 
-try{
+    const repos = await response.json();
 
-const response = await fetch(
-"https://api.github.com/users/anandamurti/repos?sort=updated&per_page=6"
-);
+    const preferredOrder = [
+      "cv",
+      "blog-application-flask",
+      "flask-login-app",
+      "FlaskProject3",
+      "OnlineChatApplication",
+      "Computer-Graphics-Unit-4"
+    ];
 
-const repos = await response.json();
+    const repoMap = new Map(repos.map((repo) => [repo.name, repo]));
 
-const reposHTML = repos
-.filter(repo => !repo.fork)
-.slice(0,6)
-.map(repo => {
+    const selectedRepos = preferredOrder
+      .map((name) => repoMap.get(name))
+      .filter(Boolean)
+      .filter((repo) => !repo.fork);
 
-return `
-<div class="repo-card">
+    const fallbackRepos = repos
+      .filter((repo) => !repo.fork)
+      .filter((repo) => repo.description || repo.language)
+      .filter((repo) => !preferredOrder.includes(repo.name))
+      .slice(0, 6 - selectedRepos.length);
 
-<h3>
-<a href="${repo.html_url}" target="_blank">
-${repo.name}
-</a>
-</h3>
+    const finalRepos = [...selectedRepos, ...fallbackRepos].slice(0, 6);
 
-<p>
-${repo.description || "No description provided."}
-</p>
+    container.innerHTML = finalRepos
+      .map((repo) => {
+        const cleanName = repo.name.replace(/-/g, " ");
+        const description = repo.description || "Source code and implementation details available in the repository.";
+        const language = repo.language || "Code";
 
-<div class="repo-meta">
-
-<span>★ ${repo.stargazers_count}</span>
-
-<span>${repo.language || "Code"}</span>
-
-</div>
-
-</div>
-`;
-
-}).join("");
-
-container.innerHTML = reposHTML;
-
-}catch(err){
-
-container.innerHTML =
-"<div class='loading-card'>Unable to load repositories.</div>";
-
-}
-
+        return `
+          <article class="repo-card">
+            <h3>
+              <a href="${repo.html_url}" target="_blank" rel="noopener">${cleanName}</a>
+            </h3>
+            <p>${description}</p>
+            <div class="repo-meta">
+              <span>★ ${repo.stargazers_count}</span>
+              <span>${language}</span>
+              <span>Updated ${new Date(repo.updated_at).toLocaleDateString()}</span>
+            </div>
+          </article>
+        `;
+      })
+      .join("");
+  } catch (error) {
+    container.innerHTML = `
+      <div class="loading-card">Unable to load repositories right now.</div>
+    `;
+  }
 }
 
 loadCV();
