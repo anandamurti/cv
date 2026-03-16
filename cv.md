@@ -1,155 +1,163 @@
 # ANANDA MOREIRA
 
-**Backend Engineer | AI Automation | Python Systems**
+**Early-Career Full-Stack Developer | Python, Node.js, Next.js, APIs, DevOps, LLM Evaluation**
 
-Rio de Janeiro, Brazil  
+Tremembe, Sao Paulo, Brazil  
 +55 12 99120-5669  
 anandaanandamurti@gmail.com  
 [LinkedIn](https://linkedin.com/in/ananda-murti-batista-moreira-837576326)  
 [GitHub](https://github.com/anandamurti)  
-Portfolio: https://anandamurti.github.io/cv/
+[Portfolio](https://anandamurti.github.io/cv/)
 
 ---
 
-## ABOUT
+## PROFESSIONAL SUMMARY
 
-Backend engineer building automation systems, intelligent workflows, and production backend platforms used in financial and insurance operations.
+Early-career full-stack developer with hands-on production experience building Python backend systems, API integrations, data pipelines, internal web applications, client-facing websites, CLI tools, and desktop automation for financial, accounting, and insurance operations.
 
-Work focuses on Python systems that integrate external APIs, process financial and operational data, automate document workflows, and support operational reporting pipelines. Systems are designed to be deterministic, testable, and maintainable, running in production Linux environments.
+Alongside day-to-day software delivery, I contribute to LLM training and evaluation work through Outlier and use modern developer tooling to move faster in research, debugging, documentation, and implementation. I am strongest in Python and backend engineering, while also building with Node.js, Next.js, JavaScript, SQL, and production deployment environments.
 
----
-
-# WORK
-
-## Backend Developer  
-**LCPT Sistemas I** — Rio de Janeiro  
-Oct 2024 – Present
-
-Design and maintain backend platforms supporting financial and insurance operations. Work includes automation systems, API integrations, document pipelines, and production deployments on Linux infrastructure.
-
-Responsible for the architecture, development, deployment, monitoring, and long-term maintenance of these systems.
+I am looking to grow inside a strong engineering team where I can keep shipping reliable software, deepen my full-stack and DevOps skills, and help build useful products and practical automation for real business problems.
 
 ---
 
-# PRODUCTION SYSTEMS
+## CORE STRENGTHS
 
-## Insurance Premium Automation Platform
-
-Backend platform automating insurance premium calculations through integrations with external insurer APIs.
-
-- Implemented Python services responsible for extraction, validation, normalization, and insurer-specific rule handling.
-- Integrated internal CRUD systems with external insurance calculation APIs.
-- Built reporting pipelines generating standardized Excel reports distributed to clients.
-- Maintain the platform in production, implementing updates, fixing bugs, and adapting to insurer rule changes.
+- Full-stack development across Python, JavaScript, Node.js, Next.js, SQL, and web UIs
+- Backend API design, integration, and workflow automation
+- Internal tools, CLI applications, desktop automation, and Excel-centric workflows
+- Practical use of developer tooling, LLM evaluation, prompt refinement, and workflow automation
+- Production support, Linux deployments, Apache, mod_wsgi, environment configuration, and debugging
+- Data-heavy systems for finance, insurance, reconciliation, reporting, and document processing
 
 ---
 
-## Financial Data Automation Platform
+## EXPERIENCE
 
-Flask web applications supporting accounting operations and internal financial workflows.
+## Backend Developer
+**LCPT Sistemas I** - Rio de Janeiro  
+Oct 2024 - Present
 
-- Built secure Flask applications deployed on Linux using Apache and mod_wsgi.
-- Integrated Microsoft SQL Server databases supporting operational financial data.
-- Implemented filtering, validation, and export pipelines used by accounting teams.
-- Maintained deployment environments and infrastructure configuration.
+Build and maintain production systems used in financial and insurance operations, with ownership across architecture, development, deployment, debugging, and long-term support.
 
----
+- Develop backend services, internal web applications, CLI tools, and desktop utilities that automate premium calculations, reporting workflows, document processing, and data reconciliation.
+- Integrate internal CRUD platforms with external insurer APIs and business-specific rules.
+- Deploy and maintain Flask applications on Linux using Apache, mod_wsgi, Microsoft SQL Server, and supporting infrastructure configuration.
+- Build and maintain client-facing web pipelines, including Node.js and Flask applications connected through production Apache, NAT, DNS, and cPanel setup.
+- Build data pipelines that transform PDFs, bank statements, and financial records into structured datasets for accounting and operational use.
+- Deliver custom accounting software that converts portfolio statements and Excel inputs into structured client-ready workbooks.
+- Support production issues, adapt systems to changing client requirements, and keep critical workflows stable over time.
 
-## Document Processing Pipeline
+## LLM Trainer and Evaluator
+**Outlier** - Concurrent contract work
 
-Data processing systems converting non-searchable financial documents into structured datasets.
+Contribute to LLM training and quality improvement work while continuing software delivery in production environments.
 
-- Developed Python systems converting financial portfolios and statements into machine-readable formats.
-- Built data normalization pipelines for accounting and reconciliation workflows.
-- Implemented structured dataset generation supporting financial reporting.
-
----
-
-## Bank Statement Normalization System
-
-Financial data normalization system supporting a wide range of bank formats.
-
-- Developed a pipeline supporting more than **70 bank statement layouts**.
-- Implemented normalization logic transforming raw bank extracts into structured financial data.
-- Maintained compatibility as banks modify document formats.
+- Review model outputs for quality, reasoning, instruction-following, and factual consistency.
+- Help improve prompt quality and evaluation rigor across varied tasks and edge cases.
+- Strengthen practical understanding of how language models behave in real workflows, including where deterministic engineering and human review still matter.
+- Apply this experience to faster iteration, clearer prompt design, and more reliable automation decisions.
 
 ---
 
-## Data Reconciliation Engine
+## SELECTED SYSTEMS
 
-Financial reconciliation utilities used for operational accounting validation.
+### Insurance Premium Automation Platform
 
-- Built deterministic matching systems comparing bank extracts with portfolio records.
-- Implemented **BM25-based fuzzy matching** to detect partial text similarities.
-- Generated Excel workbooks highlighting exact matches, fuzzy matches, and unmatched records.
-- Designed systems to be auditable and explainable for financial review processes.
+- Built Python services that extract, validate, normalize, and route data across insurer-specific API workflows.
+- Supported automated calculation pipelines and standardized Excel reporting for client delivery.
+- Maintain the platform in production as external rules and integrations change.
+
+### Financial Data Automation Platform
+
+- Built Flask applications for accounting and finance teams, backed by Microsoft SQL Server.
+- Delivered secure Linux-hosted web tools for filtering, validating, and exporting operational data.
+- Supported deployment configuration, maintenance, and production troubleshooting.
+
+### Client Acquisition and Interactive Avatar Web Pipeline
+
+- Built and launched [c1.lcpt.com.br](https://c1.lcpt.com.br), a static Node.js website used to attract clients through interactive content including a workflow simulator, ROI calculator, and call-to-action entry into the product flow.
+- Built and maintain [c2.lcpt.com.br](https://c2.lcpt.com.br), a Flask application connected to the main site, providing login, registration, and gated access to the consultora avatar experience.
+- Configured Apache, NAT, DNS, and cPanel to publish, connect, and keep both applications running in production.
+- Continue maintaining the full pipeline, including deployment updates, connectivity, and operational reliability.
+
+### Portfolio PDF to Excel Automation Platform
+
+- Built a production Python application for an accounting firm's client that converts UBS-style portfolio statements from PDF into structured Excel workbooks.
+- Implemented resilient extraction workflows using Camelot, Tabula, pdfplumber, and Google Document AI OCR fallback for hard-to-parse statements.
+- Generated audit-friendly outputs including per-account workbook tabs, summary sheets, diagnostics, and JSON run reports for downstream validation.
+- Designed the CLI workflow for single-file and batch execution, making it suitable for repeated operational automation.
+
+### Cashflow Desktop Application
+
+- Built a Windows desktop application in Python and PySide6 for an accounting client, turning one or more Excel inputs into a monthly cashflow workbook in Brazilian Portuguese.
+- Implemented background processing with QThread so the UI remains responsive during file transformation and workbook generation.
+- Added robust Excel ingestion, monthly dropdown automation, formula-driven movement mapping, and packaged build workflows for local deployment.
+
+### Document Processing and Reconciliation Workflows
+
+- Developed pipelines that convert non-searchable financial documents into structured, machine-readable data.
+- Built normalization logic for more than **70 bank statement layouts**.
+- Implemented deterministic matching and BM25-based fuzzy matching to support auditable reconciliation.
+
+### Retrieval and Search Systems
+
+- Built search and indexing pipelines using crawling, tokenization, inverted indexes, TF-IDF, cosine similarity, and SQLite-backed retrieval.
+- Applied information retrieval concepts to document-heavy business workflows and confidential client work.
 
 ---
 
-## Information Retrieval Engine
+## TECHNICAL SKILLS
 
-Search engine pipeline implemented in Python.
+### Languages
+Python, JavaScript, SQL, PHP
 
-- Built a web crawler with robots.txt compliance and host politeness rules.
-- Implemented text preprocessing including tokenization, stopword filtering, and Porter stemming.
-- Designed an inverted index stored in SQLite.
-- Implemented TF-IDF document weighting and cosine similarity ranking.
-- Built a CLI search interface returning ranked document results.
+### Full-Stack and Backend
+Flask, SQLAlchemy, Node.js, Next.js, REST APIs, server-rendered web applications, CRUD systems, Typer
 
----
+### Frontend and UI
+HTML, CSS, Tailwind CSS, Bootstrap, responsive interfaces
 
-## Confidential Retrieval Platform (Production — NDA)
+### Data and Automation
+Pandas, OpenPyXL, PDF extraction, OCR, Google Document AI, Excel report generation, workflow automation, data normalization
 
-Document retrieval system developed for a UK diamond industry client.
+### Desktop and Client Tooling
+PySide6, QThread, Windows desktop applications, localized business tooling
 
-- Built indexing pipelines supporting structured and unstructured document retrieval.
-- Implemented ranking logic using vector-space similarity scoring.
-- Designed scalable indexing workflows supporting efficient query retrieval.
-
----
-
-# TECHNOLOGIES
-
-### Programming
-Python, SQL, JavaScript, PHP
-
-### Backend Systems
-Flask, SQLAlchemy, Flask-WTF, Flask-Bcrypt
-
-### Data Processing
-Pandas, OpenPyXL, document parsing, financial data normalization pipelines
-
-### Search & Retrieval
-TF-IDF, cosine similarity, inverted indexes, tokenization, stemming
+### LLM and Automation
+LLM evaluation, prompt refinement, workflow automation, development tooling
 
 ### Databases
-MySQL, Microsoft SQL Server, SQLite
+Microsoft SQL Server, MySQL, SQLite
 
-### Infrastructure
-Linux (Ubuntu), Apache2, mod_wsgi, SSL/TLS, Python virtual environments
+### Platforms
+Linux, Windows, macOS
+
+### Infrastructure and DevOps
+Apache2, mod_wsgi, SSL/TLS, DNS, NAT, cPanel, environment setup, deployment support, GitHub Pages
 
 ---
 
-# EDUCATION
+## EDUCATION
 
 Bachelor of Science in Computer Science  
-University of the People — Pasadena, USA  
-2022 – 2026 (In Progress)
+University of the People - Pasadena, USA  
+2022 - 2026 (In Progress)
 
 ---
 
-# ADDITIONAL TRAINING
+## TRAINING
 
-- Website Development with Python & Flask — Alison
-- SQL for Beginners — Alison
-- Data Analysis with Excel — Codecademy
-- Front End Development (CSS) — Great Learning
-- Learn to Program: The Fundamentals — Coursera
-- AI Fluency Framework & Foundations — Anthropic
+- AI Fluency Framework and Foundations - Anthropic
+- Website Development with Python and Flask - Alison
+- SQL for Beginners - Alison
+- Data Analysis with Excel - Codecademy
+- Front End Development (CSS) - Great Learning
+- Learn to Program: The Fundamentals - Coursera
 
 ---
 
-# LANGUAGES
+## LANGUAGES
 
 English  
 Portuguese
