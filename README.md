@@ -8,7 +8,7 @@ Live site: https://anandamurti.github.io/cv/
 
 ## What this repo shows
 
-- Python, Flask, Node.js, Next.js, REST APIs, and SQL-based application work
+- Python, Flask, Node.js, Java, MongoDB, REST APIs, and SQL-based application work
 - Desktop and internal tooling with PySide6, Excel automation, and document processing
 - Production deployment experience across Apache, mod_wsgi, DNS, NAT, cPanel, and GitHub Pages
 - LLM evaluation work through Outlier, presented in practical and non-buzzy terms
@@ -36,17 +36,18 @@ Live site: https://anandamurti.github.io/cv/
 ### Financial and Insurance Automation Systems
 
 - Backend services for insurer API integrations, reporting, reconciliation, and data normalization
-- Internal Flask applications deployed on Linux with Apache and Microsoft SQL Server
+- Internal Flask applications deployed on Linux with Apache and SQL databases
 
 ## Stack
 
-- Languages: Python, JavaScript, SQL, PHP
-- Backend: Flask, SQLAlchemy, Node.js, Next.js, REST APIs, Typer
+- Languages: Python, JavaScript, Java, SQL, PHP, Swift
+- Backend: Flask, SQLAlchemy, Node.js, Java, MongoDB, REST APIs, Typer, Maven
 - Frontend: HTML, CSS, Tailwind CSS, Bootstrap
 - Data and automation: Pandas, OpenPyXL, OCR, Google Document AI, PDF extraction
 - Desktop: PySide6, QThread, Windows desktop tooling
-- Platforms: Linux, Windows, macOS
-- Infrastructure: Apache2, mod_wsgi, SSL/TLS, DNS, NAT, cPanel, GitHub Pages
+- API and tooling: Postman, Git, GitHub
+- Platforms: Linux, Windows
+- Infrastructure: AWS, Apache2, mod_wsgi, SSL/TLS, DNS, NAT, cPanel, GitHub Pages
 
 ## Local development
 

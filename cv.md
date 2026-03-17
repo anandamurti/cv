@@ -1,6 +1,6 @@
 # ANANDA MOREIRA
 
-**Early-Career Full-Stack Developer | Python, Node.js, Next.js, APIs, DevOps, LLM Evaluation**
+**Early-Career Full-Stack Developer | Python, Node.js, Java, MongoDB, APIs, AWS**
 
 Tremembe, Sao Paulo, Brazil  
 +55 12 99120-5669  
@@ -9,13 +9,18 @@ anandaanandamurti@gmail.com
 [GitHub](https://github.com/anandamurti)  
 [Portfolio](https://anandamurti.github.io/cv/)
 
+<div class="cv-downloads">
+<a href="./resume.pdf" download class="btn-secondary cv-download-link">Download CV</a>
+<a href="./cover_letter.md" download class="btn-secondary cv-download-link">Download Cover Letter</a>
+</div>
+
 ---
 
 ## PROFESSIONAL SUMMARY
 
 Early-career full-stack developer with hands-on production experience building Python backend systems, API integrations, data pipelines, internal web applications, client-facing websites, CLI tools, and desktop automation for financial, accounting, and insurance operations.
 
-Alongside day-to-day software delivery, I contribute to LLM training and evaluation work through Outlier and use modern developer tooling to move faster in research, debugging, documentation, and implementation. I am strongest in Python and backend engineering, while also building with Node.js, Next.js, JavaScript, SQL, and production deployment environments.
+Alongside day-to-day software delivery, I contribute to LLM training and evaluation work through Outlier and use modern developer tooling to move faster in research, debugging, documentation, and implementation. I am strongest in Python and backend engineering, while also building with Node.js, Java, MongoDB, JavaScript, and production deployment environments.
 
 I am looking to grow inside a strong engineering team where I can keep shipping reliable software, deepen my full-stack and DevOps skills, and help build useful products and practical automation for real business problems.
 
@@ -23,7 +28,7 @@ I am looking to grow inside a strong engineering team where I can keep shipping 
 
 ## CORE STRENGTHS
 
-- Full-stack development across Python, JavaScript, Node.js, Next.js, SQL, and web UIs
+- Full-stack development across Python, JavaScript, Node.js, Java, SQL, MongoDB, and web UIs
 - Backend API design, integration, and workflow automation
 - Internal tools, CLI applications, desktop automation, and Excel-centric workflows
 - Practical use of developer tooling, LLM evaluation, prompt refinement, and workflow automation
@@ -42,7 +47,7 @@ Build and maintain production systems used in financial and insurance operations
 
 - Develop backend services, internal web applications, CLI tools, and desktop utilities that automate premium calculations, reporting workflows, document processing, and data reconciliation.
 - Integrate internal CRUD platforms with external insurer APIs and business-specific rules.
-- Deploy and maintain Flask applications on Linux using Apache, mod_wsgi, Microsoft SQL Server, and supporting infrastructure configuration.
+- Deploy and maintain Flask applications on Linux using Apache, mod_wsgi, SQL databases, and supporting infrastructure configuration.
 - Build and maintain client-facing web pipelines, including Node.js and Flask applications connected through production Apache, NAT, DNS, and cPanel setup.
 - Build data pipelines that transform PDFs, bank statements, and financial records into structured datasets for accounting and operational use.
 - Deliver custom accounting software that converts portfolio statements and Excel inputs into structured client-ready workbooks.
@@ -70,7 +75,7 @@ Contribute to LLM training and quality improvement work while continuing softwar
 
 ### Financial Data Automation Platform
 
-- Built Flask applications for accounting and finance teams, backed by Microsoft SQL Server.
+- Built Flask applications for accounting and finance teams, backed by SQL databases.
 - Delivered secure Linux-hosted web tools for filtering, validating, and exporting operational data.
 - Supported deployment configuration, maintenance, and production troubleshooting.
 
@@ -110,10 +115,10 @@ Contribute to LLM training and quality improvement work while continuing softwar
 ## TECHNICAL SKILLS
 
 ### Languages
-Python, JavaScript, SQL, PHP
+Python, JavaScript, Java, SQL, PHP, Swift
 
 ### Full-Stack and Backend
-Flask, SQLAlchemy, Node.js, Next.js, REST APIs, server-rendered web applications, CRUD systems, Typer
+Flask, SQLAlchemy, Node.js, Java, REST APIs, server-rendered web applications, CRUD systems, Typer, Maven
 
 ### Frontend and UI
 HTML, CSS, Tailwind CSS, Bootstrap, responsive interfaces
@@ -124,17 +129,20 @@ Pandas, OpenPyXL, PDF extraction, OCR, Google Document AI, Excel report generati
 ### Desktop and Client Tooling
 PySide6, QThread, Windows desktop applications, localized business tooling
 
+### API and Developer Tooling
+Postman, Git, GitHub, workflow automation
+
 ### LLM and Automation
 LLM evaluation, prompt refinement, workflow automation, development tooling
 
 ### Databases
-Microsoft SQL Server, MySQL, SQLite
+MongoDB, MySQL, SQLite
 
 ### Platforms
-Linux, Windows, macOS
+Linux, Windows
 
 ### Infrastructure and DevOps
-Apache2, mod_wsgi, SSL/TLS, DNS, NAT, cPanel, environment setup, deployment support, GitHub Pages
+AWS, Apache2, mod_wsgi, SSL/TLS, DNS, NAT, cPanel, environment setup, deployment support, GitHub Pages
 
 ---
 

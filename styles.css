@@ -398,11 +398,6 @@ img{
   font-size:48px;
 }
 
-.nextjs-icon,
-.apple-icon{
-  color:var(--ink);
-}
-
 .stack-glyph{
   display:inline-flex;
   align-items:center;
@@ -520,6 +515,21 @@ img{
 }
 
 #cv a{
+  color:var(--accent-dark);
+}
+
+#cv .cv-downloads{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:18px 0 6px;
+}
+
+#cv .cv-download-link{
+  color:var(--ink);
+}
+
+#cv .cv-download-link:hover{
   color:var(--accent-dark);
 }
 
@@ -741,6 +751,10 @@ footer{
   .buttons,
   .hero-links{
     flex-direction:column;
+  }
+
+  #cv .cv-download-link{
+    width:100%;
   }
 
   .btn-primary,
