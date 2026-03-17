@@ -7,11 +7,12 @@ Tremembe, Sao Paulo, Brazil
 anandaanandamurti@gmail.com  
 [LinkedIn](https://linkedin.com/in/ananda-murti-batista-moreira-837576326)  
 [GitHub](https://github.com/anandamurti)  
-[Portfolio](https://anandamurti.github.io/cv/)
+[Portfolio](https://anandamurti.github.io/cv/)  
+[Cover Letter PDF](https://anandamurti.github.io/cv/cover_letter.pdf)
 
 <div class="cv-downloads">
 <a href="./resume.pdf" download class="btn-secondary cv-download-link">Download CV</a>
-<a href="./cover_letter.md" download class="btn-secondary cv-download-link">Download Cover Letter</a>
+<a href="./cover_letter.pdf" download class="btn-secondary cv-download-link">Download Cover Letter</a>
 </div>
 
 ---

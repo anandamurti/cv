@@ -1,6 +1,6 @@
-I am pleased to recommend Ananda Moreira, who has been working with me at LCPT Sistemas e Serviços de Informática as a Backend Developer focused on automation systems and production software.
+I am pleased to recommend Ananda Moreira, who has been working with me at LCPT Sistemas e Servicos de Informatica as a Backend Developer focused on automation systems and production software.
 
-Since joining our team, Ananda has taken ownership of multiple systems that are actively used in financial and insurance operations. His work is not limited to development tasks—he is involved across the full lifecycle of the software, including architecture decisions, backend implementation, deployment, and ongoing production support.
+Since joining our team, Ananda has taken ownership of multiple systems that are actively used in financial and insurance operations. His work is not limited to development tasks - he is involved across the full lifecycle of the software, including architecture decisions, backend implementation, deployment, and ongoing production support.
 
 Ananda has designed and maintained a Python-based automation platform that integrates with multiple insurer APIs to perform insurance premium calculations and generate standardized Excel reports for clients. This system operates under real business constraints, requiring careful handling of data normalization, validation, and evolving external integrations.
 
@@ -21,4 +21,4 @@ I am confident that Ananda will be a strong asset to any engineering team, parti
 Sincerely,
 Luis Cesar Pinheiro
 Owner
-LCPT Sistemas e Serviços de Informática
+LCPT Sistemas e Servicos de Informatica
