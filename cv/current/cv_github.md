@@ -1,20 +1,13 @@
 # Ananda Moreira
 
-Full-stack developer working mostly in Python backends, document-heavy automation, and local AI tools. Most of my recent work has been web apps, internal tools, and retrieval workflows for finance, insurance, and accounting teams, with the usual mix of messy inputs, validation rules, deployment problems, and support work.
+Full Stack Developer | AI, RAG, Automation
 
 Tremembe, Sao Paulo, Brazil  
 +55 12 99120-5669  
 [anandaanandamurti@gmail.com](mailto:anandaanandamurti@gmail.com)  
 [GitHub](https://github.com/anandamurti) | [LinkedIn](https://linkedin.com/in/ananda-murti-batista-moreira-837576326) | [Portfolio](https://anandamurti.github.io/cv/)
 
-## What I Build Most
-
-- Python backends and internal tools with real operational constraints
-- Document pipelines: PDF extraction, OCR fallback, Excel generation, reconciliation
-- Local AI / retrieval systems where the backend owns prompts, scope, and validation
-- Linux-hosted apps that still need someone to debug Apache, DNS, NAT, or broken integrations
-
-## Selected Projects
+## Systems
 
 ### Local-First LLM Automation Platform
 *Next.js, TypeScript, Python, Ollama, LanceDB, SQLite*
@@ -44,15 +37,15 @@ Tremembe, Sao Paulo, Brazil
 - Set up Apache, DNS, NAT, and cPanel so both apps stayed reachable and routed correctly in production.
 - Handled releases and break-fix work across both sides once it was live.
 
-## Experience
+## Work
 
-### Backend Developer
-**LCPT Sistemas I** | Oct 2024 - Present
+### Full Stack Developer
+**LCPT Sistemas** | Oct 2024 - Present
 
 - Build Flask apps, Python services, CLI tools, and desktop utilities for finance, insurance, and accounting workflows.
 - Turn PDFs, bank statements, insurer data, and Excel inputs into structured outputs teams can review, export, and use downstream.
 - Deploy and debug Linux-hosted applications running on Apache and mod_wsgi, with SQL databases, DNS/NAT configuration, and the usual environment issues.
-- Implemented OCR-assisted extraction, normalization for more than 70 bank statement layouts, and deterministic plus BM25-style matching for reconciliation.
+- Implemented OCR-assisted extraction, normalization for various layouts, and deterministic plus BM25-style matching for reconciliation.
 - Keep systems usable after client rules change, third-party APIs shift, or something breaks in production.
 
 ### LLM Trainer and Evaluator
@@ -61,7 +54,7 @@ Tremembe, Sao Paulo, Brazil
 - Reviewed model outputs for reasoning quality, instruction-following, and factual consistency across varied tasks.
 - That work made me stricter about where LLMs help and where you still want schemas, validation, and deterministic code.
 
-## Stack
+## Tools I Use
 
 - Python, JavaScript, Java, SQL
 - Flask, Node.js, Next.js, TypeScript, REST APIs, SQLAlchemy

@@ -14,7 +14,7 @@
   "professional_summary": [
     "Early-career full-stack developer with hands-on production experience building Python backend systems, API integrations, data pipelines, internal web applications, client-facing websites, CLI tools, and desktop automation for financial, accounting, and insurance operations.",
     "Alongside day-to-day software delivery, I contribute to LLM training and evaluation work through Outlier and use modern developer tooling to move faster in research, debugging, documentation, and implementation.",
-    "I am strongest in Python and backend engineering, while also building with Node.js, Java, MongoDB, JavaScript, and production deployment environments."
+    "I am strongest in Python and full-stack engineering, while also building with Node.js, Java, MongoDB, JavaScript, and production deployment environments."
   ],
   "core_strengths": [
     "Full-stack development across Python, JavaScript, Node.js, Java, SQL, MongoDB, and web UIs",
@@ -26,8 +26,8 @@
   ],
   "experience": [
     {
-      "title": "Backend Developer",
-      "company": "LCPT Sistemas I",
+      "title": "Full Stack Developer",
+      "company": "LCPT Sistemas",
       "location": "Rio de Janeiro, Brazil",
       "date_range": "Oct 2024 - Present",
       "summary": "Build and maintain production systems used in financial and insurance operations, with ownership across architecture, development, deployment, debugging, and long-term support.",
@@ -102,7 +102,7 @@
       "name": "Document Processing and Reconciliation Workflows",
       "bullets": [
         "Developed pipelines that convert non-searchable financial documents into structured, machine-readable data.",
-        "Built normalization logic for more than 70 bank statement layouts.",
+        "Built normalization logic for various bank statement layouts.",
         "Implemented deterministic matching and BM25-based fuzzy matching to support auditable reconciliation."
       ]
     },

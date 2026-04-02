@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ananda Moreira | CV</title>
+  <title>Ananda Moreira | Full Stack Developer | AI, RAG, Automation</title>
   <style>
     @page {
-      margin: 0.6in;
       size: Letter;
+      margin: 0.45in;
     }
 
     :root {
       color-scheme: light;
-      --paper: #fbfaf6;
-      --ink: #141414;
-      --muted: #5f5f5f;
-      --line: #d9d1c7;
-      --accent: #a24a24;
-      --accent-soft: rgba(162, 74, 36, 0.08);
+      --paper: #f6f0e4;
+      --ink: #111824;
+      --muted: #505b69;
+      --line: rgba(17, 24, 36, 0.16);
+      --rail-a: #143855;
+      --rail-b: #23628f;
+      --accent: #f15a2a;
+      --panel: #fffdf8;
     }
 
     * {
@@ -26,15 +28,9 @@
 
     body {
       margin: 0;
-      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      font-family: "Segoe UI", "Trebuchet MS", sans-serif;
       background: var(--paper);
       color: var(--ink);
-      line-height: 1.45;
-    }
-
-    main {
-      max-width: 8.1in;
-      margin: 0 auto;
     }
 
     h1,
@@ -45,40 +41,63 @@
       margin: 0;
     }
 
-    header {
-      border-bottom: 2px solid var(--ink);
-      padding-bottom: 0.18in;
-      margin-bottom: 0.24in;
+    .sheet {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
     }
 
-    .eyebrow {
-      letter-spacing: 0.06em;
-      font-size: 10.5px;
-      color: var(--accent);
-      margin-bottom: 0.08in;
-      font-weight: 700;
+    .layout {
+      display: grid;
+      grid-template-columns: 2.15in 1fr;
+      min-height: 9.7in;
     }
 
-    h1 {
-      font-size: 31px;
+    .sidebar {
+      padding: 0.24in;
+      background: linear-gradient(180deg, var(--rail-a), var(--rail-b));
+      color: #f7fbff;
+      display: grid;
+      align-content: start;
+      gap: 0.18in;
+    }
+
+    .avatar {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+    }
+
+    .sidebar h1 {
+      font-size: 18px;
       line-height: 1.05;
-      letter-spacing: -0.04em;
-      margin-bottom: 0.08in;
+      letter-spacing: 0.02em;
     }
 
-    .summary {
-      font-size: 12.5px;
-      color: var(--ink);
-      max-width: 6.9in;
+    .sidebar .role {
+      margin-top: 6px;
+      font-size: 11px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .sidebar h2 {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #d5ebff;
+      margin-bottom: 7px;
     }
 
     .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 16px;
-      margin-top: 0.14in;
-      font-size: 11px;
-      color: var(--muted);
+      display: grid;
+      gap: 6px;
+      font-size: 10px;
+      line-height: 1.35;
+      color: #eaf6ff;
     }
 
     .contact a {
@@ -86,251 +105,359 @@
       text-decoration: none;
     }
 
-    section {
-      margin-bottom: 0.22in;
-      break-inside: avoid;
+    .tool-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
     }
 
-    .section-title {
+    .tool-item {
       display: flex;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 0.11in;
+      align-items: center;
+      gap: 6px;
+      min-height: 26px;
+      padding: 5px 6px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 9px;
+      line-height: 1.2;
     }
 
-    .section-title h2 {
-      font-size: 11px;
-      letter-spacing: 0.08em;
+    .tool-item img {
+      width: 14px;
+      height: 14px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .main {
+      padding: 0.22in;
+      display: grid;
+      align-content: start;
+      gap: 0.14in;
+    }
+
+    .masthead {
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 0.11in;
+    }
+
+    .masthead h2 {
+      font-size: 28px;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+    }
+
+    .masthead .role {
+      margin-top: 7px;
+      font-size: 13px;
+      font-weight: 600;
       color: var(--accent);
     }
 
-    .section-title span {
-      flex: 1;
-      height: 1px;
-      background: var(--line);
-    }
-
-    .skills {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px 18px;
-      font-size: 11px;
-    }
-
-    .skill-group,
-    .entry {
-      border: 1px solid var(--line);
-      background: #fff;
-      padding: 12px 14px;
-    }
-
-    .skill-group strong,
-    .entry-head strong {
-      color: var(--ink);
-    }
-
-    .projects,
-    .experience {
-      display: grid;
-      gap: 12px;
-    }
-
-    .entry.flagship {
-      background: linear-gradient(180deg, #fff 0%, var(--accent-soft) 100%);
-      border-color: rgba(162, 74, 36, 0.3);
-    }
-
-    .entry-head {
+    .meta {
+      margin-top: 8px;
       display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 7px;
-      font-size: 12px;
-    }
-
-    .entry-meta {
-      color: var(--muted);
-      white-space: nowrap;
-    }
-
-    .stack {
+      flex-wrap: wrap;
+      gap: 6px 14px;
       font-size: 10px;
       color: var(--muted);
-      margin-bottom: 8px;
-      font-weight: 600;
-      letter-spacing: 0.01em;
     }
 
-    ul {
-      padding-left: 17px;
+    section {
+      break-inside: avoid;
+    }
+
+    section h3 {
+      margin-bottom: 6px;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .summary {
+      font-size: 10.3px;
+      line-height: 1.45;
+      color: #2f3845;
+    }
+
+    .feature {
+      padding: 11px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(17, 24, 36, 0.97), rgba(17, 24, 36, 0.9));
+      color: #f8fbff;
+    }
+
+    .feature .head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 5px;
       font-size: 11px;
     }
 
-    li + li {
-      margin-top: 5px;
+    .feature .stack {
+      font-size: 9px;
+      margin-bottom: 6px;
+      color: #b2d6ff;
     }
 
-    .footer-grid {
+    .feature ul,
+    .entry ul,
+    .system ul {
+      padding-left: 16px;
+      font-size: 9.9px;
+      line-height: 1.35;
+    }
+
+    .systems {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      font-size: 11px;
+      gap: 8px;
+    }
+
+    .system {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 9px 10px;
+    }
+
+    .system .head,
+    .entry .head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+      margin-bottom: 4px;
+      font-size: 10px;
+    }
+
+    .system .stack,
+    .entry .stack {
+      margin-bottom: 5px;
+      font-size: 8.7px;
+      color: var(--muted);
+    }
+
+    .experience {
+      display: grid;
+      gap: 8px;
+    }
+
+    .entry {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 9px 10px;
+    }
+
+    .education {
+      display: grid;
+      grid-template-columns: 1fr 0.72fr;
+      gap: 8px;
+    }
+
+    .edu-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 9px 10px;
+      background: #fff;
+      font-size: 9.9px;
+      line-height: 1.35;
+    }
+
+    .edu-card strong {
+      display: block;
+      font-size: 10.3px;
+      margin-bottom: 3px;
     }
 
     @media print {
-      a {
-        color: inherit;
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
     }
   </style>
 </head>
 <body>
-  <main>
-    <header>
-      <p class="eyebrow">Full-stack developer | Python, AI, automation</p>
-      <h1>Ananda Moreira</h1>
-      <p class="summary">
-        Full-stack developer working mostly in Python backends, document-heavy automation, and local AI tools. Most of my recent work has been web apps, internal tools, and retrieval workflows for finance, insurance, and accounting teams, with the usual mix of messy inputs, validation rules, deployment problems, and support work.
-      </p>
-      <div class="contact">
-        <span>Tremembe, Sao Paulo, Brazil</span>
-        <span>+55 12 99120-5669</span>
-        <a href="mailto:anandaanandamurti@gmail.com">anandaanandamurti@gmail.com</a>
-        <a href="https://github.com/anandamurti">github.com/anandamurti</a>
-        <a href="https://linkedin.com/in/ananda-murti-batista-moreira-837576326">LinkedIn</a>
-      </div>
-    </header>
+  <main class="sheet">
+    <div class="layout">
+      <aside class="sidebar">
+        <img class="avatar" src="../../profile.jpg" alt="Portrait of Ananda Moreira">
 
-    <section>
-      <div class="section-title">
-        <h2>Stack</h2>
-        <span></span>
-      </div>
-      <div class="skills">
-        <div class="skill-group"><strong>Languages:</strong> Python, JavaScript, Java, SQL, HTML/CSS</div>
-        <div class="skill-group"><strong>Backend / Full stack:</strong> Flask, Node.js, REST APIs, SQLAlchemy, CRUD systems, Next.js, TypeScript, authentication flows</div>
-        <div class="skill-group"><strong>AI / Retrieval:</strong> RAG, Ollama integration, structured LLM outputs, chunking, embeddings, LanceDB, SQLite / FTS architecture</div>
-        <div class="skill-group"><strong>Data / Automation:</strong> Pandas, OpenPyXL, PDF extraction, OCR workflows, Google Document AI, Excel generation, CLI tooling</div>
-        <div class="skill-group"><strong>Desktop / UI:</strong> PySide6, QThread, responsive interfaces, localized business tooling</div>
-        <div class="skill-group"><strong>Infra / Deployment:</strong> Linux, Windows, Apache, mod_wsgi, AWS, SSL/TLS, DNS, NAT, cPanel, Git, GitHub</div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-title">
-        <h2>Selected Projects</h2>
-        <span></span>
-      </div>
-      <div class="projects">
-        <article class="entry flagship">
-          <div class="entry-head">
-            <strong>Local-First LLM Automation Platform</strong>
-            <span class="entry-meta">Flagship Project</span>
-          </div>
-          <p class="stack">Next.js | TypeScript | Python | Ollama | LanceDB | SQLite</p>
-          <ul>
-            <li>Built the first working slice of a local-first RAG platform with a Next.js UI, a Python API, a worker-style ingestion path, and a loopback-only Ollama runtime.</li>
-            <li>Kept retrieval, prompts, and model calls in the backend. Implemented authenticated uploads, immutable document versions, chunk manifests, workspace-scoped LanceDB storage, and citation-aware chat streaming with structured Ollama output.</li>
-            <li>The target retrieval path is hybrid: SQLite FTS for exact terms, LanceDB for semantic recall. Added retrieval scoping and local-only policy checks to keep the browser away from the model and prevent cross-workspace leaks.</li>
-          </ul>
-        </article>
-
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Portfolio PDF to Excel Automation Platform</strong>
-            <span class="entry-meta">Production System</span>
-          </div>
-          <p class="stack">Python | Camelot | Tabula | pdfplumber | Google Document AI | OpenPyXL</p>
-          <ul>
-            <li>Built a Python pipeline that turns UBS-style portfolio statements into Excel workbooks ready for accounting review.</li>
-            <li>Used Camelot, Tabula, pdfplumber, and Google Document AI as fallback because one parser was not enough for real statements.</li>
-            <li>Added batch and single-file CLI modes, summary sheets, diagnostics, and JSON run reports for audit and validation.</li>
-          </ul>
-        </article>
-
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Insurance Premium Automation Platform</strong>
-            <span class="entry-meta">Production System</span>
-          </div>
-          <p class="stack">Python | REST APIs | Excel automation</p>
-          <ul>
-            <li>Built Python services around insurer APIs, validation rules, and reporting flows used for premium calculation.</li>
-            <li>Normalized insurer-specific responses before feeding them into internal CRUD and Excel reporting flows.</li>
-            <li>Kept the system running as API contracts and business rules changed.</li>
-          </ul>
-        </article>
-
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Client Acquisition and Flask Portal Pipeline</strong>
-            <span class="entry-meta">Full-Stack Delivery</span>
-          </div>
-          <p class="stack">Node.js | Flask | Apache | DNS | NAT | cPanel</p>
-          <ul>
-            <li>Built a public Node.js site for interactive lead capture, then connected it to a Flask portal for login, registration, and gated access.</li>
-            <li>Set up Apache, DNS, NAT, and cPanel so both apps stayed reachable and routed correctly in production.</li>
-            <li>Handled releases and break-fix work across both sides once it was live.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-title">
-        <h2>Experience</h2>
-        <span></span>
-      </div>
-      <div class="experience">
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Backend Developer, LCPT Sistemas I</strong>
-            <span class="entry-meta">Oct 2024 - Present</span>
-          </div>
-          <ul>
-            <li>Build Flask apps, Python services, CLI tools, and desktop utilities for finance, insurance, and accounting workflows.</li>
-            <li>Turn PDFs, bank statements, insurer data, and Excel inputs into structured outputs teams can review, export, and use downstream.</li>
-            <li>Deploy and debug Linux-hosted applications running on Apache and mod_wsgi, with SQL databases, DNS/NAT configuration, and the usual environment issues.</li>
-            <li>Implemented OCR-assisted extraction, normalization for more than 70 bank statement layouts, and deterministic plus BM25-style matching for reconciliation.</li>
-            <li>Keep systems usable after client rules change, third-party APIs shift, or something breaks in production.</li>
-          </ul>
-        </article>
-
-        <article class="entry">
-          <div class="entry-head">
-            <strong>LLM Trainer and Evaluator, Outlier</strong>
-            <span class="entry-meta">Concurrent contract</span>
-          </div>
-          <ul>
-            <li>Reviewed model outputs for reasoning quality, instruction-following, and factual consistency across varied tasks.</li>
-            <li>That work made me stricter about where LLMs help and where you still want schemas, validation, and deterministic code.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-title">
-        <h2>Education</h2>
-        <span></span>
-      </div>
-      <div class="footer-grid">
-        <div class="entry">
-          <div class="entry-head">
-            <strong>Bachelor of Science in Computer Science, Magna Cum Laude</strong>
-            <span class="entry-meta">2026</span>
-          </div>
-          <p>University of the People</p>
+        <div>
+          <h1>Ananda Moreira</h1>
+          <p class="role">Full Stack Developer | AI, RAG, Automation</p>
         </div>
-        <div class="entry">
-          <div class="entry-head">
-            <strong>Languages</strong>
-            <span class="entry-meta">Professional</span>
+
+        <div>
+          <h2>Contact</h2>
+          <div class="contact">
+            <span>Tremembe, Sao Paulo, Brazil</span>
+            <span>+55 12 99120-5669</span>
+            <a href="mailto:anandaanandamurti@gmail.com">anandaanandamurti@gmail.com</a>
+            <a href="https://github.com/anandamurti">github.com/anandamurti</a>
+            <a href="https://linkedin.com/in/ananda-murti-batista-moreira-837576326">linkedin.com/in/ananda-murti-batista-moreira-837576326</a>
           </div>
-          <p>English, Portuguese</p>
         </div>
+
+        <div>
+          <h2>Toolbelt</h2>
+          <div class="tool-grid">
+            <div class="tool-item"><img src="../../assets/icons/python.svg" alt="Python"><span>Python</span></div>
+            <div class="tool-item"><img src="../../assets/icons/flask.svg" alt="Flask"><span>Flask</span></div>
+            <div class="tool-item"><img src="../../assets/icons/nodejs.svg" alt="Node.js"><span>Node.js</span></div>
+            <div class="tool-item"><img src="../../assets/icons/typescript.svg" alt="TypeScript"><span>TypeScript</span></div>
+            <div class="tool-item"><img src="../../assets/icons/javascript.svg" alt="JavaScript"><span>JavaScript</span></div>
+            <div class="tool-item"><img src="../../assets/icons/nextjs.svg" alt="Next.js"><span>Next.js</span></div>
+            <div class="tool-item"><img src="../../assets/icons/pandas.svg" alt="Pandas"><span>Pandas</span></div>
+            <div class="tool-item"><img src="../../assets/icons/sqlite.svg" alt="SQLite"><span>SQLite</span></div>
+            <div class="tool-item"><img src="../../assets/icons/linux.svg" alt="Linux"><span>Linux</span></div>
+            <div class="tool-item"><img src="../../assets/icons/apache.svg" alt="Apache"><span>Apache</span></div>
+            <div class="tool-item"><img src="../../assets/icons/aws.svg" alt="AWS"><span>AWS</span></div>
+            <div class="tool-item"><img src="../../assets/icons/git.svg" alt="Git"><span>Git</span></div>
+            <div class="tool-item"><img src="../../assets/icons/github.svg" alt="GitHub"><span>GitHub</span></div>
+            <div class="tool-item"><img src="../../assets/icons/docker.svg" alt="Docker"><span>Docker</span></div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main">
+        <header class="masthead">
+          <h2>Ananda Moreira</h2>
+          <p class="role">Full Stack Developer | AI, RAG, Automation</p>
+          <div class="meta">
+            <span>Finance, insurance, and accounting systems</span>
+            <span>Full-stack delivery and local-first AI architecture</span>
+          </div>
+        </header>
+
+        <section>
+          <h3>Profile</h3>
+          <p class="summary">
+            Full-stack engineer building automation systems that combine APIs, PDF and OCR processing,
+            retrieval workflows, and production support. Practical delivery style: deterministic logic where required,
+            LLMs where useful, and full ownership after launch.
+          </p>
+        </section>
+
+        <section>
+          <h3>Flagship Build</h3>
+          <article class="feature">
+            <div class="head">
+              <strong>Local-first LLM automation platform</strong>
+              <span>Flagship</span>
+            </div>
+            <p class="stack">Next.js | Python API | Ollama | LanceDB | SQLite FTS</p>
+            <ul>
+              <li>Built authenticated uploads, immutable document versions, chunk manifests, and workspace-scoped retrieval.</li>
+              <li>Kept prompts, model calls, and validation in the backend to preserve control and traceability.</li>
+              <li>Designed a hybrid retrieval path combining exact-term recall and semantic search.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section>
+          <h3>Production Systems</h3>
+          <div class="systems">
+            <article class="system">
+              <div class="head">
+                <strong>Portfolio PDF to Excel</strong>
+                <span>Finance</span>
+              </div>
+              <p class="stack">Camelot | Tabula | pdfplumber | OCR fallback | OpenPyXL</p>
+              <ul>
+                <li>Converted UBS-style statements into auditable workbooks.</li>
+                <li>Shipped single-file and batch execution flows.</li>
+              </ul>
+            </article>
+
+            <article class="system">
+              <div class="head">
+                <strong>Insurance premium automation</strong>
+                <span>API</span>
+              </div>
+              <p class="stack">Python services | Validation rules | Reporting</p>
+              <ul>
+                <li>Integrated insurer APIs and normalized changing payloads.</li>
+                <li>Kept reporting stable while external contracts evolved.</li>
+              </ul>
+            </article>
+
+            <article class="system">
+              <div class="head">
+                <strong>Client web and portal pipeline</strong>
+                <span>Full Stack</span>
+              </div>
+              <p class="stack">Node.js | Flask | Apache | DNS | NAT | cPanel</p>
+              <ul>
+                <li>Built public capture funnel and gated Flask experience.</li>
+                <li>Handled infrastructure setup and break-fix releases.</li>
+              </ul>
+            </article>
+
+            <article class="system">
+              <div class="head">
+                <strong>Cashflow desktop application</strong>
+                <span>Desktop</span>
+              </div>
+              <p class="stack">Python | PySide6 | QThread | Excel workflows</p>
+              <ul>
+                <li>Produced monthly workbooks from accounting input files.</li>
+                <li>Kept the UI responsive during long processing jobs.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h3>Experience</h3>
+          <div class="experience">
+            <article class="entry">
+              <div class="head">
+                <strong>Full Stack Developer, LCPT Sistemas</strong>
+                <span>Oct 2024 - Present</span>
+              </div>
+              <ul>
+                <li>Build and maintain Flask apps, Python services, CLI tools, and internal automation software.</li>
+                <li>Deploy Linux-hosted systems with Apache and mod_wsgi and handle production debugging.</li>
+                <li>Implemented OCR-assisted extraction and reconciliation logic across various layouts.</li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="head">
+                <strong>LLM Trainer and Evaluator, Outlier</strong>
+                <span>Concurrent</span>
+              </div>
+              <ul>
+                <li>Evaluate model outputs for reasoning quality, factual consistency, and instruction-following.</li>
+                <li>Use that evaluation discipline to design safer, more deterministic product behavior.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h3>Education and Languages</h3>
+          <div class="education">
+            <article class="edu-card">
+              <strong>B.S. Computer Science, Magna Cum Laude</strong>
+              <span>University of the People, 2026</span>
+            </article>
+            <article class="edu-card">
+              <strong>Languages</strong>
+              <span>English, Portuguese</span>
+            </article>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   </main>
 </body>
 </html>

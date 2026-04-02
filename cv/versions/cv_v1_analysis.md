@@ -20,7 +20,7 @@
 - You already have evidence of backend ownership: Flask apps, API integrations, SQL-backed systems, Linux deployments, Apache, mod_wsgi, and production support.
 - The search / retrieval background is real. Even before the new RAG project, you already had indexing and retrieval concepts in your work.
 - Outlier is useful when framed correctly. It should not be treated as your AI credential; it should be treated as the experience that sharpened your judgment around failure modes, evaluation, and structured output quality.
-- `70+ bank statement layouts` is exactly the kind of specific operational detail worth keeping.
+- `various bank statement layouts` is a strong operational detail while staying NDA-safe.
 
 ## 3. What is missing for junior full-stack roles
 

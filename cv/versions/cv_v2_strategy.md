@@ -35,7 +35,7 @@ Junior full-stack developer building local-first AI systems, document pipelines,
 ### What to expand
 
 - The local-first RAG platform
-- High-signal production systems tied to automation and backend engineering
+- High-signal production systems tied to automation and full-stack engineering
 - Full-stack evidence where you owned both application code and deployment surfaces
 - Security, retrieval, validation, and orchestration decisions
 

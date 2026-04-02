@@ -5,11 +5,11 @@ Tremembe, Sao Paulo, Brazil
 [anandaanandamurti@gmail.com](mailto:anandaanandamurti@gmail.com)  
 [GitHub](https://github.com/anandamurti) | [LinkedIn](https://linkedin.com/in/ananda-murti-batista-moreira-837576326) | [Portfolio](https://anandamurti.github.io/cv/)
 
-## Positioning
+## Identity
 
-Full-stack developer working mostly in Python backends, document-heavy automation, and local AI tools. Most of my recent work has been web apps, internal tools, and retrieval workflows for finance, insurance, and accounting teams, with the usual mix of messy inputs, validation rules, deployment problems, and support work.
+Full Stack Developer | AI, RAG, Automation
 
-## Stack
+## Tools I Use
 
 - Languages: Python, JavaScript, Java, SQL, HTML/CSS
 - Backend / Full stack: Flask, Node.js, REST APIs, SQLAlchemy, CRUD systems, server-rendered web apps, Next.js, TypeScript, authentication flows
@@ -19,7 +19,7 @@ Full-stack developer working mostly in Python backends, document-heavy automatio
 - Databases and Platforms: SQLite, MySQL, MongoDB, Linux, Windows
 - Infra / Deployment: Apache, mod_wsgi, AWS, SSL/TLS, DNS, NAT, cPanel, Git, GitHub, GitHub Pages
 
-## Selected Projects
+## Systems
 
 ### Local-First LLM Automation Platform
 *Next.js, TypeScript, Python, Ollama, LanceDB, SQLite*
@@ -56,15 +56,15 @@ Full-stack developer working mostly in Python backends, document-heavy automatio
 - Moved long-running workbook generation onto QThread so the UI stayed usable.
 - Added validation, monthly mappings, dropdown generation, and packaged builds for day-to-day client use.
 
-## Experience
+## Work
 
-### Backend Developer
-**LCPT Sistemas I** | Oct 2024 - Present
+### Full Stack Developer
+**LCPT Sistemas** | Oct 2024 - Present
 
 - Build Flask apps, Python services, CLI tools, and desktop utilities for finance, insurance, and accounting workflows.
 - Turn PDFs, bank statements, insurer data, and Excel inputs into structured outputs teams can review, export, and use downstream.
 - Deploy and debug Linux-hosted applications running on Apache and mod_wsgi, with SQL databases, DNS/NAT configuration, and the usual environment issues.
-- Implemented OCR-assisted extraction, normalization for more than 70 bank statement layouts, and deterministic plus BM25-style matching for reconciliation.
+- Implemented OCR-assisted extraction, normalization for various layouts, and deterministic plus BM25-style matching for reconciliation.
 - Keep systems usable after client rules change, third-party APIs shift, or something breaks in production.
 
 ### LLM Trainer and Evaluator
