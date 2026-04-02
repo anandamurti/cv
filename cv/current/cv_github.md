@@ -1,23 +1,18 @@
 # Ananda Moreira
 
+Full-stack developer working mostly in Python backends, document-heavy automation, and local AI tools. Most of my recent work has been web apps, internal tools, and retrieval workflows for finance, insurance, and accounting teams, with the usual mix of messy inputs, validation rules, deployment problems, and support work.
+
 Tremembe, Sao Paulo, Brazil  
 +55 12 99120-5669  
 [anandaanandamurti@gmail.com](mailto:anandaanandamurti@gmail.com)  
 [GitHub](https://github.com/anandamurti) | [LinkedIn](https://linkedin.com/in/ananda-murti-batista-moreira-837576326) | [Portfolio](https://anandamurti.github.io/cv/)
 
-## Positioning
+## What I Build Most
 
-Full-stack developer working mostly in Python backends, document-heavy automation, and local AI tools. Most of my recent work has been web apps, internal tools, and retrieval workflows for finance, insurance, and accounting teams, with the usual mix of messy inputs, validation rules, deployment problems, and support work.
-
-## Stack
-
-- Languages: Python, JavaScript, Java, SQL, HTML/CSS
-- Backend / Full stack: Flask, Node.js, REST APIs, SQLAlchemy, CRUD systems, server-rendered web apps, Next.js, TypeScript, authentication flows
-- AI / Retrieval: RAG, Ollama integration, structured LLM outputs, chunking, embeddings, LanceDB, SQLite / FTS architecture
-- Data / Automation: Pandas, OpenPyXL, PDF extraction, OCR workflows, Google Document AI, Excel generation, CLI tooling
-- Desktop and UI: PySide6, QThread, responsive interfaces, localized business tooling
-- Databases and Platforms: SQLite, MySQL, MongoDB, Linux, Windows
-- Infra / Deployment: Apache, mod_wsgi, AWS, SSL/TLS, DNS, NAT, cPanel, Git, GitHub, GitHub Pages
+- Python backends and internal tools with real operational constraints
+- Document pipelines: PDF extraction, OCR fallback, Excel generation, reconciliation
+- Local AI / retrieval systems where the backend owns prompts, scope, and validation
+- Linux-hosted apps that still need someone to debug Apache, DNS, NAT, or broken integrations
 
 ## Selected Projects
 
@@ -49,13 +44,6 @@ Full-stack developer working mostly in Python backends, document-heavy automatio
 - Set up Apache, DNS, NAT, and cPanel so both apps stayed reachable and routed correctly in production.
 - Handled releases and break-fix work across both sides once it was live.
 
-### Cashflow Desktop Application
-*Python, PySide6, QThread, Excel automation*
-
-- Built a Windows desktop application that transforms one or more Excel inputs into a monthly cashflow workbook for an accounting client.
-- Moved long-running workbook generation onto QThread so the UI stayed usable.
-- Added validation, monthly mappings, dropdown generation, and packaged builds for day-to-day client use.
-
 ## Experience
 
 ### Backend Developer
@@ -73,11 +61,24 @@ Full-stack developer working mostly in Python backends, document-heavy automatio
 - Reviewed model outputs for reasoning quality, instruction-following, and factual consistency across varied tasks.
 - That work made me stricter about where LLMs help and where you still want schemas, validation, and deterministic code.
 
+## Stack
+
+- Python, JavaScript, Java, SQL
+- Flask, Node.js, Next.js, TypeScript, REST APIs, SQLAlchemy
+- RAG, Ollama, structured outputs, chunking, embeddings, LanceDB, SQLite / FTS
+- Pandas, OpenPyXL, PDF extraction, OCR, Google Document AI
+- PySide6, QThread
+- Apache, mod_wsgi, AWS, DNS, NAT, cPanel, Git, GitHub
+
 ## Education
 
 **Bachelor of Science in Computer Science, Magna Cum Laude**  
 University of the People | 2026
 
-## Languages
+## Repo Artifacts
 
-English, Portuguese
+- [Markdown CV](./cv_master.md)
+- [PDF export](./cv_print.pdf)
+- [PDF-ready HTML](./cv_print.html)
+- [Baseline analysis](../versions/cv_v1_analysis.md)
+- [Rewrite strategy](../versions/cv_v2_strategy.md)

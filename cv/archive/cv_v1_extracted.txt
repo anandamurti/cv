@@ -1,0 +1,141 @@
+ANANDA MOREIRA
+
+Early-Career Full-Stack Developer | Python, Node.js, Java, MongoDB, APIs, AWS
+Tremembe, Sao Paulo, Brazil
++55 12 99120-5669
+anandaanandamurti@gmail.com
+LinkedIn
+GitHub
+Portfolio
+Cover Letter PDF
+
+PROFESSIONAL SUMMARY
+
+Early-career full-stack developer with hands-on production experience building Python backend systems, API integrations, data pipelines, internal web applications, client-facing websites, CLI tools, and desktop automation for financial, accounting, and insurance operations.
+Alongside day-to-day software delivery, I contribute to LLM training and evaluation work through Outlier and use modern developer tooling to move faster in research, debugging, documentation, and implementation. I am strongest in Python and backend engineering, while also building with Node.js, Java, MongoDB, JavaScript, and production deployment environments.
+I am looking to grow inside a strong engineering team where I can keep shipping reliable software, deepen my full-stack and DevOps skills, and help build useful products and practical automation for real business problems.
+
+CORE STRENGTHS
+
+Full-stack development across Python, JavaScript, Node.js, Java, SQL, MongoDB, and web UIs
+Backend API design, integration, and workflow automation
+Internal tools, CLI applications, desktop automation, and Excel-centric workflows
+Practical use of developer tooling, LLM evaluation, prompt refinement, and workflow automation
+Production support, Linux deployments, Apache, mod_wsgi, environment configuration, and debugging
+Data-heavy systems for finance, insurance, reconciliation, reporting, and document processing
+
+EXPERIENCE
+
+BACKEND DEVELOPER
+
+LCPT Sistemas I - Rio de Janeiro
+Oct 2024 - Present
+Build and maintain production systems used in financial and insurance operations, with ownership across architecture, development, deployment, debugging, and long-term support.
+
+Develop backend services, internal web applications, CLI tools, and desktop utilities that automate premium calculations, reporting workflows, document processing, and data reconciliation.
+Integrate internal CRUD platforms with external insurer APIs and business-specific rules.
+Deploy and maintain Flask applications on Linux using Apache, mod_wsgi, SQL databases, and supporting infrastructure configuration.
+Build and maintain client-facing web pipelines, including Node.js and Flask applications connected through production Apache, NAT, DNS, and cPanel setup.
+Build data pipelines that transform PDFs, bank statements, and financial records into structured datasets for accounting and operational use.
+Deliver custom accounting software that converts portfolio statements and Excel inputs into structured client-ready workbooks.
+Support production issues, adapt systems to changing client requirements, and keep critical workflows stable over time.
+
+LLM TRAINER AND EVALUATOR
+
+Outlier - Concurrent contract work
+Contribute to LLM training and quality improvement work while continuing software delivery in production environments.
+
+Review model outputs for quality, reasoning, instruction-following, and factual consistency.
+Help improve prompt quality and evaluation rigor across varied tasks and edge cases.
+Strengthen practical understanding of how language models behave in real workflows, including where deterministic engineering and human review still matter.
+Apply this experience to faster iteration, clearer prompt design, and more reliable automation decisions.
+
+SELECTED SYSTEMS
+
+Insurance Premium Automation Platform
+Built Python services that extract, validate, normalize, and route data across insurer-specific API workflows.
+Supported automated calculation pipelines and standardized Excel reporting for client delivery.
+Maintain the platform in production as external rules and integrations change.
+
+Financial Data Automation Platform
+Built Flask applications for accounting and finance teams, backed by SQL databases.
+Delivered secure Linux-hosted web tools for filtering, validating, and exporting operational data.
+Supported deployment configuration, maintenance, and production troubleshooting.
+
+Client Acquisition and Interactive Avatar Web Pipeline
+Built and launched c1.lcpt.com.br, a static Node.js website used to attract clients through interactive content including a workflow simulator, ROI calculator, and call-to-action entry into the product flow.
+Built and maintain c2.lcpt.com.br, a Flask application connected to the main site, providing login, registration, and gated access to the consultora avatar experience.
+Configured Apache, NAT, DNS, and cPanel to publish, connect, and keep both applications running in production.
+Continue maintaining the full pipeline, including deployment updates, connectivity, and operational reliability.
+
+Portfolio PDF to Excel Automation Platform
+Built a production Python application for an accounting firm's client that converts UBS-style portfolio statements from PDF into structured Excel workbooks.
+Implemented resilient extraction workflows using Camelot, Tabula, pdfplumber, and Google Document AI OCR fallback for hard-to-parse statements.
+Generated audit-friendly outputs including per-account workbook tabs, summary sheets, diagnostics, and JSON run reports for downstream validation.
+Designed the CLI workflow for single-file and batch execution, making it suitable for repeated operational automation.
+
+Cashflow Desktop Application
+Built a Windows desktop application in Python and PySide6 for an accounting client, turning one or more Excel inputs into a monthly cashflow workbook in Brazilian Portuguese.
+Implemented background processing with QThread so the UI remains responsive during file transformation and workbook generation.
+Added robust Excel ingestion, monthly dropdown automation, formula-driven movement mapping, and packaged build workflows for local deployment.
+
+Document Processing and Reconciliation Workflows
+Developed pipelines that convert non-searchable financial documents into structured, machine-readable data.
+Built normalization logic for more than 70 bank statement layouts.
+Implemented deterministic matching and BM25-based fuzzy matching to support auditable reconciliation.
+
+Retrieval and Search Systems
+Built search and indexing pipelines using crawling, tokenization, inverted indexes, TF-IDF, cosine similarity, and SQLite-backed retrieval.
+Applied information retrieval concepts to document-heavy business workflows and confidential client work.
+
+TECHNICAL SKILLS
+
+Languages
+Python, JavaScript, Java, SQL, PHP, Swift
+
+Full-Stack and Backend
+Flask, SQLAlchemy, Node.js, Java, REST APIs, server-rendered web applications, CRUD systems, Typer, Maven
+
+Frontend and UI
+HTML, CSS, Tailwind CSS, Bootstrap, responsive interfaces
+
+Data and Automation
+Pandas, OpenPyXL, PDF extraction, OCR, Google Document AI, Excel report generation, workflow automation, data normalization
+
+Desktop and Client Tooling
+PySide6, QThread, Windows desktop applications, localized business tooling
+
+API and Developer Tooling
+Postman, Git, GitHub, workflow automation
+
+LLM and Automation
+LLM evaluation, prompt refinement, workflow automation, development tooling
+
+Databases
+MongoDB, MySQL, SQLite
+
+Platforms
+Linux, Windows
+
+Infrastructure and DevOps
+AWS, Apache2, mod_wsgi, SSL/TLS, DNS, NAT, cPanel, environment setup, deployment support, GitHub Pages
+
+EDUCATION
+
+Bachelor of Science in Computer Science
+University of the People - Pasadena, USA
+2022 - 2026 (In Progress)
+
+TRAINING
+
+AI Fluency Framework and Foundations - Anthropic
+Website Development with Python and Flask - Alison
+SQL for Beginners - Alison
+Data Analysis with Excel - Codecademy
+Front End Development (CSS) - Great Learning
+Learn to Program: The Fundamentals - Coursera
+
+LANGUAGES
+
+English
+Portuguese
