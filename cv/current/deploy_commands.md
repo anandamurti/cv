@@ -4,9 +4,8 @@
 
 ```powershell
 git add cv\archive\cv_v1_original.pdf cv\archive\cv_v1_extracted.txt
-git add cv\current\cv_master.md cv\current\cv_github.md cv\current\cv_print.html cv\current\cv_print.pdf cv\current\deploy_commands.md
-git add cv\versions\cv_v1_structured.json cv\versions\cv_v1_analysis.md cv\versions\cv_v2_strategy.md
-git add README.md cv.md index.html styles.css app.js resume.pdf public\resume.pdf public\cv-print.html
+git add cv\current\cv_master.md cv\current\cv_github.md cv\current\cv_print.html cv\current\cv_print.pdf cv\current\cover_letter_print.html cv\current\cover_letter_print.pdf cv\current\deploy_commands.md
+git add README.md cv.md cover_letter.md index.html styles.css app.js resume.pdf cover_letter.pdf public\resume.pdf public\cv-print.html
 ```
 
 ## 2. Build and preview the GitHub Pages version locally

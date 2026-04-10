@@ -7,6 +7,20 @@ Tremembe, Sao Paulo, Brazil
 [anandaanandamurti@gmail.com](mailto:anandaanandamurti@gmail.com)  
 [GitHub](https://github.com/anandamurti) | [LinkedIn](https://linkedin.com/in/ananda-murti-batista-moreira-837576326) | [Portfolio](https://anandamurti.github.io/cv/)
 
+## Identity
+
+Full Stack Developer | AI, RAG, Automation
+
+## Tools I Use
+
+- Languages: Python, JavaScript, Java, SQL, HTML/CSS
+- Backend / Full stack: Flask, Node.js, REST APIs, SQLAlchemy, CRUD systems, server-rendered web apps, Next.js, TypeScript, authentication flows
+- AI / Retrieval: RAG, Ollama integration, structured LLM outputs, chunking, embeddings, LanceDB, SQLite / FTS architecture
+- Data / Automation: Pandas, OpenPyXL, PDF extraction, OCR workflows, Google Document AI, Excel generation, CLI tooling
+- Desktop and UI: PySide6, QThread, responsive interfaces, localized business tooling
+- Databases and Platforms: SQLite, MySQL, MongoDB, Linux, Windows
+- Infra / Deployment: Apache, mod_wsgi, AWS, SSL/TLS, DNS, NAT, cPanel, Git, GitHub, GitHub Pages
+
 ## Systems
 
 ### Local-First LLM Automation Platform
@@ -37,6 +51,13 @@ Tremembe, Sao Paulo, Brazil
 - Set up Apache, DNS, NAT, and cPanel so both apps stayed reachable and routed correctly in production.
 - Handled releases and break-fix work across both sides once it was live.
 
+### Cashflow Desktop Application
+*Python, PySide6, QThread, Excel automation*
+
+- Built a Windows desktop application that transforms one or more Excel inputs into a monthly cashflow workbook for an accounting client.
+- Moved long-running workbook generation onto QThread so the UI stayed usable.
+- Added validation, monthly mappings, dropdown generation, and packaged builds for day-to-day client use.
+
 ## Work
 
 ### Full Stack Developer
@@ -54,24 +75,33 @@ Tremembe, Sao Paulo, Brazil
 - Reviewed model outputs for reasoning quality, instruction-following, and factual consistency across varied tasks.
 - That work made me stricter about where LLMs help and where you still want schemas, validation, and deterministic code.
 
-## Tools I Use
-
-- Python, JavaScript, Java, SQL
-- Flask, Node.js, Next.js, TypeScript, REST APIs, SQLAlchemy
-- RAG, Ollama, structured outputs, chunking, embeddings, LanceDB, SQLite / FTS
-- Pandas, OpenPyXL, PDF extraction, OCR, Google Document AI
-- PySide6, QThread
-- Apache, mod_wsgi, AWS, DNS, NAT, cPanel, Git, GitHub
-
 ## Education
 
 **Bachelor of Science in Computer Science, Magna Cum Laude**  
 University of the People | 2026
 
+## Certificates
+
+- [Anthropic | AI Fluency Framework & Foundations](https://verify.skilljar.com/c/zj7tcfqkp835) (Issued Mar 2026 | Code: zj7tcfqkp835)
+- [HackerRank | Node.js (Intermediate)](https://www.hackerrank.com/certificates/b7a07d12a317) (Issued Apr 2026 | Code: b7a07d12a317)
+- [Alison | Python-Flask diploma](https://alison.com/certification/check/ec35c4f195) (Issued May 2025 | Code: ec35c4f195)
+- [Alison | SQL for Beginners](https://alison.com/certification/check/655b518dc2) (Issued Mar 2025 | Code: 655b518dc2)
+
+## Languages
+
+English, Portuguese
+
 ## Repo Artifacts
 
-- [Markdown CV](./cv/current/cv_master.md)
-- [PDF export](./cv/current/cv_print.pdf)
-- [PDF-ready HTML](./cv/current/cv_print.html)
-- [Baseline analysis](./cv/versions/cv_v1_analysis.md)
-- [Rewrite strategy](./cv/versions/cv_v2_strategy.md)
+- [Portfolio page](./index.html)
+- [Portfolio styles](./styles.css)
+- [Portfolio interactions](./app.js)
+- [Markdown CV](./cv.md)
+- [Markdown CV source](./cv/current/cv_master.md)
+- [Resume PDF](./resume.pdf)
+- [Cover letter markdown](./cover_letter.md)
+- [Cover letter PDF](./cover_letter.pdf)
+- [PDF-ready CV HTML](./cv/current/cv_print.html)
+- [PDF-ready cover letter HTML](./cv/current/cover_letter_print.html)
+- [PDF-ready CV output](./cv/current/cv_print.pdf)
+- [PDF-ready cover letter output](./cv/current/cover_letter_print.pdf)

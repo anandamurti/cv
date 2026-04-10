@@ -78,6 +78,13 @@ Full Stack Developer | AI, RAG, Automation
 **Bachelor of Science in Computer Science, Magna Cum Laude**  
 University of the People | 2026
 
+## Certificates
+
+- [Anthropic | AI Fluency Framework & Foundations](https://verify.skilljar.com/c/zj7tcfqkp835) (Issued Mar 2026 | Code: zj7tcfqkp835)
+- [HackerRank | Node.js (Intermediate)](https://www.hackerrank.com/certificates/b7a07d12a317) (Issued Apr 2026 | Code: b7a07d12a317)
+- [Alison | Python-Flask diploma](https://alison.com/certification/check/ec35c4f195) (Issued May 2025 | Code: ec35c4f195)
+- [Alison | SQL for Beginners](https://alison.com/certification/check/655b518dc2) (Issued Mar 2025 | Code: 655b518dc2)
+
 ## Languages
 
 English, Portuguese
