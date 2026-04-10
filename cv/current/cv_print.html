@@ -58,6 +58,21 @@
       margin-bottom: 20px;
     }
 
+    .identity-top {
+      display: grid;
+      grid-template-columns: 1fr 0.92in;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .avatar {
+      width: 0.92in;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+    }
+
     .identity h1 {
       font-family: "Chivo", "IBM Plex Sans", Arial, sans-serif;
       font-size: 34px;
@@ -257,15 +272,20 @@
 <body>
   <main class="document">
     <header class="identity">
-      <h1>Ananda Moreira</h1>
-      <p class="positioning-role">Full Stack Developer | AI, RAG, Automation</p>
-      <p class="positioning-sub">Finance, insurance, and accounting systems</p>
-      <p class="positioning-sub">Full-stack delivery and local-first AI architecture</p>
-      <p class="positioning-summary">
-        Full-stack engineer building automation systems that combine APIs, PDF and OCR processing,
-        retrieval workflows, and production support. Practical delivery style: deterministic logic where required,
-        LLMs where useful, and full ownership after launch.
-      </p>
+      <div class="identity-top">
+        <div>
+          <h1>Ananda Moreira</h1>
+          <p class="positioning-role">Full Stack Developer | AI, RAG, Automation</p>
+          <p class="positioning-sub">Finance, insurance, and accounting systems</p>
+          <p class="positioning-sub">Full-stack delivery and local-first AI architecture</p>
+          <p class="positioning-summary">
+            Full-stack engineer building automation systems that combine APIs, PDF and OCR processing,
+            retrieval workflows, and production support. Practical delivery style: deterministic logic where required,
+            LLMs where useful, and full ownership after launch.
+          </p>
+        </div>
+        <img class="avatar" src="../../public/profile.jpg" alt="Portrait of Ananda Moreira">
+      </div>
       <p class="positioning-stack">
         <img class="inline-icon" src="../../assets/icons/python.svg" alt="Python">Python |
         <img class="inline-icon" src="../../assets/icons/flask.svg" alt="Flask">Flask |
@@ -440,6 +460,7 @@
         <a href="mailto:anandaanandamurti@gmail.com">anandaanandamurti@gmail.com</a>
         <a href="https://github.com/anandamurti">github.com/anandamurti</a>
         <a href="https://linkedin.com/in/ananda-murti-batista-moreira-837576326">linkedin.com/in/ananda-murti-batista-moreira-837576326</a>
+        <a href="https://anandamurti.github.io/cv/">anandamurti.github.io/cv/</a>
       </div>
     </section>
   </main>
