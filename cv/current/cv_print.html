@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,19 +7,15 @@
   <style>
     @page {
       size: Letter;
-      margin: 0.45in;
+      margin: 0.62in;
     }
 
     :root {
-      color-scheme: light;
-      --paper: #f6f0e4;
-      --ink: #111824;
-      --muted: #505b69;
-      --line: rgba(17, 24, 36, 0.16);
-      --rail-a: #143855;
-      --rail-b: #23628f;
-      --accent: #f15a2a;
-      --panel: #fffdf8;
+      --paper: #ffffff;
+      --ink: #0f1419;
+      --muted: #4a5562;
+      --line: #d3dae2;
+      --line-strong: #8d99a8;
     }
 
     * {
@@ -28,256 +24,230 @@
 
     body {
       margin: 0;
-      font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+      font-family: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
       background: var(--paper);
       color: var(--ink);
+      line-height: 1.5;
     }
 
     h1,
     h2,
     h3,
     p,
-    ul {
+    ul,
+    li {
       margin: 0;
     }
 
-    .sheet {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      overflow: hidden;
+    a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-color: var(--line-strong);
+      text-underline-offset: 2px;
     }
 
-    .layout {
-      display: grid;
-      grid-template-columns: 2.15in 1fr;
-      min-height: 9.7in;
+    .document {
+      width: min(790px, 100%);
+      margin: 0 auto;
+      padding: 0;
     }
 
-    .sidebar {
-      padding: 0.24in;
-      background: linear-gradient(180deg, var(--rail-a), var(--rail-b));
-      color: #f7fbff;
-      display: grid;
-      align-content: start;
-      gap: 0.18in;
+    .identity {
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 20px;
     }
 
-    .avatar {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      border-radius: 18px;
-      object-fit: cover;
-      border: 1px solid rgba(255, 255, 255, 0.24);
+    .identity h1 {
+      font-family: "Chivo", "IBM Plex Sans", Arial, sans-serif;
+      font-size: 34px;
+      line-height: 1.03;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
     }
 
-    .sidebar h1 {
-      font-size: 18px;
-      line-height: 1.05;
-      letter-spacing: 0.02em;
-    }
-
-    .sidebar .role {
-      margin-top: 6px;
-      font-size: 11px;
+    .positioning-role {
+      font-size: 14px;
+      font-weight: 700;
       line-height: 1.35;
-      font-weight: 600;
+      margin-bottom: 4px;
     }
 
-    .sidebar h2 {
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #d5ebff;
-      margin-bottom: 7px;
+    .positioning-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 2px;
     }
 
-    .contact {
-      display: grid;
-      gap: 6px;
-      font-size: 10px;
-      line-height: 1.35;
-      color: #eaf6ff;
-    }
-
-    .contact a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .tool-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px;
-    }
-
-    .tool-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      min-height: 26px;
-      padding: 5px 6px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      font-size: 9px;
-      line-height: 1.2;
-    }
-
-    .tool-item img {
-      width: 14px;
-      height: 14px;
-      object-fit: contain;
-      flex: 0 0 auto;
-    }
-
-    .main {
-      padding: 0.22in;
-      display: grid;
-      align-content: start;
-      gap: 0.14in;
-    }
-
-    .masthead {
-      border-bottom: 2px solid var(--ink);
-      padding-bottom: 0.11in;
-    }
-
-    .masthead h2 {
-      font-size: 28px;
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-    }
-
-    .masthead .role {
-      margin-top: 7px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--accent);
-    }
-
-    .meta {
+    .positioning-summary {
+      font-size: 12px;
+      color: var(--ink);
+      line-height: 1.58;
       margin-top: 8px;
+    }
+
+    .positioning-stack {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px 14px;
-      font-size: 10px;
+      align-items: center;
+      gap: 6px 10px;
+      font-size: 11px;
+      line-height: 1.5;
       color: var(--muted);
+      margin-top: 8px;
     }
 
-    section {
+    .inline-icon {
+      width: 10px;
+      height: 10px;
+      object-fit: contain;
+      opacity: 0.72;
+      flex: 0 0 auto;
+      vertical-align: middle;
+    }
+
+    .document-section {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .document-section h2 {
+      font-family: "Chivo", "IBM Plex Sans", Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: 0;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .system-brief {
+      margin-bottom: 14px;
       break-inside: avoid;
     }
 
-    section h3 {
-      margin-bottom: 6px;
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    .summary {
-      font-size: 10.3px;
-      line-height: 1.45;
-      color: #2f3845;
-    }
-
-    .feature {
-      padding: 11px 12px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(17, 24, 36, 0.97), rgba(17, 24, 36, 0.9));
-      color: #f8fbff;
-    }
-
-    .feature .head {
+    .system-title-row {
       display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 5px;
-      font-size: 11px;
-    }
-
-    .feature .stack {
-      font-size: 9px;
-      margin-bottom: 6px;
-      color: #b2d6ff;
-    }
-
-    .feature ul,
-    .entry ul,
-    .system ul {
-      padding-left: 16px;
-      font-size: 9.9px;
-      line-height: 1.35;
-    }
-
-    .systems {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
-
-    .system {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fff;
-      padding: 9px 10px;
-    }
-
-    .system .head,
-    .entry .head {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 6px 10px;
       align-items: baseline;
-      margin-bottom: 4px;
-      font-size: 10px;
     }
 
-    .system .stack,
-    .entry .stack {
-      margin-bottom: 5px;
-      font-size: 8.7px;
+    .system-title-row h3 {
+      font-family: "Chivo", "IBM Plex Sans", Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--ink);
+    }
+
+    .system-type {
+      font-size: 10.5px;
+      line-height: 1.2;
       color: var(--muted);
     }
 
-    .experience {
+    .stack-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 5px 8px;
+      font-size: 11px;
+      line-height: 1.45;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .system-lines {
+      margin-top: 4px;
       display: grid;
-      gap: 8px;
+      gap: 3px;
+      font-size: 11.5px;
+      line-height: 1.56;
+      color: var(--ink);
     }
 
-    .entry {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fff;
-      padding: 9px 10px;
+    .experience-entry {
+      margin-bottom: 13px;
+      break-inside: avoid;
     }
 
-    .education {
-      display: grid;
-      grid-template-columns: 1fr 0.72fr;
-      gap: 8px;
+    .experience-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 12px;
+      align-items: baseline;
     }
 
-    .edu-card {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 9px 10px;
-      background: #fff;
-      font-size: 9.9px;
+    .experience-head h3 {
+      font-family: "Chivo", "IBM Plex Sans", Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
       line-height: 1.35;
     }
 
-    .edu-card strong {
-      display: block;
-      font-size: 10.3px;
-      margin-bottom: 3px;
+    .experience-time {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .experience-lines {
+      margin-top: 3px;
+      display: grid;
+      gap: 3px;
+      font-size: 11.5px;
+      line-height: 1.56;
+    }
+
+    .credentials,
+    .contact {
+      display: grid;
+      gap: 5px;
+    }
+
+    .credential-item {
+      display: grid;
+      gap: 1px;
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    .credential-item strong {
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .credential-item span {
+      font-size: 10.5px;
+      line-height: 1.42;
+      color: var(--muted);
+    }
+
+    .contact {
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .contact a,
+    .contact span {
+      overflow-wrap: anywhere;
     }
 
     @media print {
+      * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+        background-image: none !important;
+      }
+
       body {
+        background: #ffffff;
+        color: #0f1419;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -285,179 +255,193 @@
   </style>
 </head>
 <body>
-  <main class="sheet">
-    <div class="layout">
-      <aside class="sidebar">
-        <img class="avatar" src="../../profile.jpg" alt="Portrait of Ananda Moreira">
+  <main class="document">
+    <header class="identity">
+      <h1>Ananda Moreira</h1>
+      <p class="positioning-role">Full Stack Developer | AI, RAG, Automation</p>
+      <p class="positioning-sub">Finance, insurance, and accounting systems</p>
+      <p class="positioning-sub">Full-stack delivery and local-first AI architecture</p>
+      <p class="positioning-summary">
+        Full-stack engineer building automation systems that combine APIs, PDF and OCR processing,
+        retrieval workflows, and production support. Practical delivery style: deterministic logic where required,
+        LLMs where useful, and full ownership after launch.
+      </p>
+      <p class="positioning-stack">
+        <img class="inline-icon" src="../../assets/icons/python.svg" alt="Python">Python |
+        <img class="inline-icon" src="../../assets/icons/flask.svg" alt="Flask">Flask |
+        <img class="inline-icon" src="../../assets/icons/nodejs.svg" alt="Node.js">Node.js |
+        <img class="inline-icon" src="../../assets/icons/typescript.svg" alt="TypeScript">TypeScript |
+        <img class="inline-icon" src="../../assets/icons/javascript.svg" alt="JavaScript">JavaScript |
+        <img class="inline-icon" src="../../assets/icons/nextjs.svg" alt="Next.js">Next.js |
+        <img class="inline-icon" src="../../assets/icons/pandas.svg" alt="Pandas">Pandas |
+        <img class="inline-icon" src="../../assets/icons/sqlite.svg" alt="SQLite">SQLite |
+        <img class="inline-icon" src="../../assets/icons/linux.svg" alt="Linux">Linux |
+        <img class="inline-icon" src="../../assets/icons/apache.svg" alt="Apache">Apache |
+        <img class="inline-icon" src="../../assets/icons/aws.svg" alt="AWS">AWS |
+        <img class="inline-icon" src="../../assets/icons/git.svg" alt="Git">Git |
+        <img class="inline-icon" src="../../assets/icons/github.svg" alt="GitHub">GitHub |
+        <img class="inline-icon" src="../../assets/icons/docker.svg" alt="Docker">Docker
+      </p>
+    </header>
 
-        <div>
-          <h1>Ananda Moreira</h1>
-          <p class="role">Full Stack Developer | AI, RAG, Automation</p>
+    <section class="document-section">
+      <h2>Systems</h2>
+
+      <article class="system-brief">
+        <div class="system-title-row">
+          <h3>Local-first LLM automation platform</h3>
+          <p class="system-type">Flagship</p>
+        </div>
+        <p class="stack-line">
+          <img class="inline-icon" src="../../assets/icons/nextjs.svg" alt="Next.js">
+          <img class="inline-icon" src="../../assets/icons/python.svg" alt="Python">
+          <img class="inline-icon" src="../../assets/icons/sqlite.svg" alt="SQLite">
+          Next.js | Python API | Ollama | LanceDB | SQLite FTS
+        </p>
+        <div class="system-lines">
+          <p>Built authenticated uploads, immutable document versions, chunk manifests, and workspace-scoped retrieval.</p>
+          <p>Kept prompts, model calls, and validation in the backend to preserve control and traceability.</p>
+          <p>Designed a hybrid retrieval path combining exact-term recall and semantic search.</p>
+        </div>
+      </article>
+
+      <article class="system-brief">
+        <div class="system-title-row">
+          <h3>Portfolio PDF to Excel</h3>
+          <p class="system-type">Finance</p>
+        </div>
+        <p class="stack-line">
+          <img class="inline-icon" src="../../assets/icons/python.svg" alt="Python">
+          <img class="inline-icon" src="../../assets/icons/pandas.svg" alt="Pandas">
+          Camelot | Tabula | pdfplumber | OCR fallback | OpenPyXL
+        </p>
+        <div class="system-lines">
+          <p>Converted UBS-style statements into auditable workbooks.</p>
+          <p>Shipped single-file and batch execution flows.</p>
+        </div>
+      </article>
+
+      <article class="system-brief">
+        <div class="system-title-row">
+          <h3>Insurance premium automation</h3>
+          <p class="system-type">API</p>
+        </div>
+        <p class="stack-line">
+          <img class="inline-icon" src="../../assets/icons/python.svg" alt="Python">
+          Python services | Validation rules | Reporting
+        </p>
+        <div class="system-lines">
+          <p>Integrated insurer APIs and normalized changing payloads.</p>
+          <p>Kept reporting stable while external contracts evolved.</p>
+        </div>
+      </article>
+
+      <article class="system-brief">
+        <div class="system-title-row">
+          <h3>Client web and portal pipeline</h3>
+          <p class="system-type">Full Stack</p>
+        </div>
+        <p class="stack-line">
+          <img class="inline-icon" src="../../assets/icons/nodejs.svg" alt="Node.js">
+          <img class="inline-icon" src="../../assets/icons/flask.svg" alt="Flask">
+          <img class="inline-icon" src="../../assets/icons/apache.svg" alt="Apache">
+          Node.js | Flask | Apache | DNS | NAT | cPanel
+        </p>
+        <div class="system-lines">
+          <p>Built public capture funnel and gated Flask experience.</p>
+          <p>Handled infrastructure setup and break-fix releases.</p>
+        </div>
+      </article>
+
+      <article class="system-brief">
+        <div class="system-title-row">
+          <h3>Cashflow desktop application</h3>
+          <p class="system-type">Desktop</p>
+        </div>
+        <p class="stack-line">
+          <img class="inline-icon" src="../../assets/icons/python.svg" alt="Python">
+          Python | PySide6 | QThread | Excel workflows
+        </p>
+        <div class="system-lines">
+          <p>Produced monthly workbooks from accounting input files.</p>
+          <p>Kept the UI responsive during long processing jobs.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="document-section">
+      <h2>Experience</h2>
+
+      <article class="experience-entry">
+        <div class="experience-head">
+          <h3>Full Stack Developer, LCPT Sistemas</h3>
+          <p class="experience-time">Oct 2024 - Present</p>
+        </div>
+        <div class="experience-lines">
+          <p>Build and maintain Flask apps, Python services, CLI tools, and internal automation software.</p>
+          <p>Deploy Linux-hosted systems with Apache and mod_wsgi and handle production debugging.</p>
+          <p>Implemented OCR-assisted extraction and reconciliation logic across various layouts.</p>
+        </div>
+      </article>
+
+      <article class="experience-entry">
+        <div class="experience-head">
+          <h3>LLM Trainer and Evaluator, Outlier</h3>
+          <p class="experience-time">Concurrent</p>
+        </div>
+        <div class="experience-lines">
+          <p>Evaluate model outputs for reasoning quality, factual consistency, and instruction-following.</p>
+          <p>Use that evaluation discipline to design safer, more deterministic product behavior.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="document-section">
+      <h2>Credentials</h2>
+
+      <div class="credentials">
+        <div class="credential-item">
+          <strong>B.S. Computer Science, Magna Cum Laude</strong>
+          <span>University of the People, 2026</span>
         </div>
 
-        <div>
-          <h2>Contact</h2>
-          <div class="contact">
-            <span>Tremembe, Sao Paulo, Brazil</span>
-            <span>+55 12 99120-5669</span>
-            <a href="mailto:anandaanandamurti@gmail.com">anandaanandamurti@gmail.com</a>
-            <a href="https://github.com/anandamurti">github.com/anandamurti</a>
-            <a href="https://linkedin.com/in/ananda-murti-batista-moreira-837576326">linkedin.com/in/ananda-murti-batista-moreira-837576326</a>
-          </div>
+        <div class="credential-item">
+          <strong><a href="https://verify.skilljar.com/c/zj7tcfqkp835">Anthropic | AI Fluency Framework &amp; Foundations</a></strong>
+          <span>Issued Mar 2026 | Code zj7tcfqkp835</span>
         </div>
 
-        <div>
-          <h2>Toolbelt</h2>
-          <div class="tool-grid">
-            <div class="tool-item"><img src="../../assets/icons/python.svg" alt="Python"><span>Python</span></div>
-            <div class="tool-item"><img src="../../assets/icons/flask.svg" alt="Flask"><span>Flask</span></div>
-            <div class="tool-item"><img src="../../assets/icons/nodejs.svg" alt="Node.js"><span>Node.js</span></div>
-            <div class="tool-item"><img src="../../assets/icons/typescript.svg" alt="TypeScript"><span>TypeScript</span></div>
-            <div class="tool-item"><img src="../../assets/icons/javascript.svg" alt="JavaScript"><span>JavaScript</span></div>
-            <div class="tool-item"><img src="../../assets/icons/nextjs.svg" alt="Next.js"><span>Next.js</span></div>
-            <div class="tool-item"><img src="../../assets/icons/pandas.svg" alt="Pandas"><span>Pandas</span></div>
-            <div class="tool-item"><img src="../../assets/icons/sqlite.svg" alt="SQLite"><span>SQLite</span></div>
-            <div class="tool-item"><img src="../../assets/icons/linux.svg" alt="Linux"><span>Linux</span></div>
-            <div class="tool-item"><img src="../../assets/icons/apache.svg" alt="Apache"><span>Apache</span></div>
-            <div class="tool-item"><img src="../../assets/icons/aws.svg" alt="AWS"><span>AWS</span></div>
-            <div class="tool-item"><img src="../../assets/icons/git.svg" alt="Git"><span>Git</span></div>
-            <div class="tool-item"><img src="../../assets/icons/github.svg" alt="GitHub"><span>GitHub</span></div>
-            <div class="tool-item"><img src="../../assets/icons/docker.svg" alt="Docker"><span>Docker</span></div>
-          </div>
+        <div class="credential-item">
+          <strong><a href="https://www.hackerrank.com/certificates/b7a07d12a317">HackerRank | Node.js (Intermediate)</a></strong>
+          <span>Issued Apr 2026 | Code b7a07d12a317</span>
         </div>
-      </aside>
 
-      <div class="main">
-        <header class="masthead">
-          <h2>Ananda Moreira</h2>
-          <p class="role">Full Stack Developer | AI, RAG, Automation</p>
-          <div class="meta">
-            <span>Finance, insurance, and accounting systems</span>
-            <span>Full-stack delivery and local-first AI architecture</span>
-          </div>
-        </header>
+        <div class="credential-item">
+          <strong><a href="https://alison.com/certification/check/ec35c4f195">Alison | Python-Flask diploma</a></strong>
+          <span>Issued May 2025 | Code ec35c4f195</span>
+        </div>
 
-        <section>
-          <h3>Profile</h3>
-          <p class="summary">
-            Full-stack engineer building automation systems that combine APIs, PDF and OCR processing,
-            retrieval workflows, and production support. Practical delivery style: deterministic logic where required,
-            LLMs where useful, and full ownership after launch.
-          </p>
-        </section>
+        <div class="credential-item">
+          <strong><a href="https://alison.com/certification/check/655b518dc2">Alison | SQL for Beginners</a></strong>
+          <span>Issued Mar 2025 | Code 655b518dc2</span>
+        </div>
 
-        <section>
-          <h3>Flagship Build</h3>
-          <article class="feature">
-            <div class="head">
-              <strong>Local-first LLM automation platform</strong>
-              <span>Flagship</span>
-            </div>
-            <p class="stack">Next.js | Python API | Ollama | LanceDB | SQLite FTS</p>
-            <ul>
-              <li>Built authenticated uploads, immutable document versions, chunk manifests, and workspace-scoped retrieval.</li>
-              <li>Kept prompts, model calls, and validation in the backend to preserve control and traceability.</li>
-              <li>Designed a hybrid retrieval path combining exact-term recall and semantic search.</li>
-            </ul>
-          </article>
-        </section>
-
-        <section>
-          <h3>Production Systems</h3>
-          <div class="systems">
-            <article class="system">
-              <div class="head">
-                <strong>Portfolio PDF to Excel</strong>
-                <span>Finance</span>
-              </div>
-              <p class="stack">Camelot | Tabula | pdfplumber | OCR fallback | OpenPyXL</p>
-              <ul>
-                <li>Converted UBS-style statements into auditable workbooks.</li>
-                <li>Shipped single-file and batch execution flows.</li>
-              </ul>
-            </article>
-
-            <article class="system">
-              <div class="head">
-                <strong>Insurance premium automation</strong>
-                <span>API</span>
-              </div>
-              <p class="stack">Python services | Validation rules | Reporting</p>
-              <ul>
-                <li>Integrated insurer APIs and normalized changing payloads.</li>
-                <li>Kept reporting stable while external contracts evolved.</li>
-              </ul>
-            </article>
-
-            <article class="system">
-              <div class="head">
-                <strong>Client web and portal pipeline</strong>
-                <span>Full Stack</span>
-              </div>
-              <p class="stack">Node.js | Flask | Apache | DNS | NAT | cPanel</p>
-              <ul>
-                <li>Built public capture funnel and gated Flask experience.</li>
-                <li>Handled infrastructure setup and break-fix releases.</li>
-              </ul>
-            </article>
-
-            <article class="system">
-              <div class="head">
-                <strong>Cashflow desktop application</strong>
-                <span>Desktop</span>
-              </div>
-              <p class="stack">Python | PySide6 | QThread | Excel workflows</p>
-              <ul>
-                <li>Produced monthly workbooks from accounting input files.</li>
-                <li>Kept the UI responsive during long processing jobs.</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section>
-          <h3>Experience</h3>
-          <div class="experience">
-            <article class="entry">
-              <div class="head">
-                <strong>Full Stack Developer, LCPT Sistemas</strong>
-                <span>Oct 2024 - Present</span>
-              </div>
-              <ul>
-                <li>Build and maintain Flask apps, Python services, CLI tools, and internal automation software.</li>
-                <li>Deploy Linux-hosted systems with Apache and mod_wsgi and handle production debugging.</li>
-                <li>Implemented OCR-assisted extraction and reconciliation logic across various layouts.</li>
-              </ul>
-            </article>
-
-            <article class="entry">
-              <div class="head">
-                <strong>LLM Trainer and Evaluator, Outlier</strong>
-                <span>Concurrent</span>
-              </div>
-              <ul>
-                <li>Evaluate model outputs for reasoning quality, factual consistency, and instruction-following.</li>
-                <li>Use that evaluation discipline to design safer, more deterministic product behavior.</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section>
-          <h3>Education and Languages</h3>
-          <div class="education">
-            <article class="edu-card">
-              <strong>B.S. Computer Science, Magna Cum Laude</strong>
-              <span>University of the People, 2026</span>
-            </article>
-            <article class="edu-card">
-              <strong>Languages</strong>
-              <span>English, Portuguese</span>
-            </article>
-          </div>
-        </section>
+        <div class="credential-item">
+          <strong>Languages</strong>
+          <span>English, Portuguese</span>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="document-section">
+      <h2>Contact</h2>
+      <div class="contact">
+        <span>Tremembe, Sao Paulo, Brazil</span>
+        <span>+55 12 99120-5669</span>
+        <a href="mailto:anandaanandamurti@gmail.com">anandaanandamurti@gmail.com</a>
+        <a href="https://github.com/anandamurti">github.com/anandamurti</a>
+        <a href="https://linkedin.com/in/ananda-murti-batista-moreira-837576326">linkedin.com/in/ananda-murti-batista-moreira-837576326</a>
+      </div>
+    </section>
   </main>
 </body>
 </html>

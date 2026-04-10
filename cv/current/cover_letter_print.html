@@ -6,16 +6,16 @@
   <title>Ananda Moreira | Cover Letter</title>
   <style>
     @page {
-      margin: 0.7in;
+      margin: 0.62in;
       size: Letter;
     }
 
     :root {
-      --paper: #fbf7f0;
-      --ink: #111212;
-      --muted: #5c6062;
-      --line: rgba(17, 18, 18, 0.14);
-      --accent: #ac4c26;
+      --paper: #ffffff;
+      --ink: #0f1419;
+      --muted: #4a5562;
+      --line: #d3dae2;
+      --line-strong: #8d99a8;
     }
 
     * {
@@ -24,15 +24,14 @@
 
     body {
       margin: 0;
-      font-family: "Space Grotesk", "Segoe UI", sans-serif;
+      font-family: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
       background: var(--paper);
       color: var(--ink);
-      word-break: keep-all;
-      overflow-wrap: normal;
+      line-height: 1.56;
     }
 
     main {
-      max-width: 7.1in;
+      width: min(790px, 100%);
       margin: 0 auto;
     }
 
@@ -41,87 +40,62 @@
       margin: 0;
     }
 
-    p,
-    span,
     h1 {
-      word-break: keep-all;
-      overflow-wrap: normal;
-      hyphens: none;
+      font-family: "Chivo", "IBM Plex Sans", Arial, sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.02;
+      margin-bottom: 6px;
     }
 
-    header {
-      display: grid;
-      gap: 8px;
-      padding-bottom: 18px;
-      border-bottom: 2px solid var(--ink);
-      margin-bottom: 22px;
-    }
-
-    .eyebrow {
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    h1 {
-      font-size: 30px;
-      letter-spacing: normal;
-      line-height: 0.98;
-    }
-
-    .identity {
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 16px;
+    .author {
+      font-size: 12.5px;
+      font-weight: 700;
+      line-height: 1.45;
       color: var(--muted);
-      font-size: 11px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: none;
     }
 
     article {
       display: grid;
-      gap: 16px;
-      font-size: 12.5px;
-      line-height: 1.62;
+      gap: 10px;
+      font-size: 12px;
+      line-height: 1.58;
     }
 
-    .signoff {
-      padding-top: 6px;
+    .closing {
+      margin-top: 2px;
+      line-height: 1.5;
+    }
+
+    @media print {
+      * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+        background-image: none !important;
+      }
     }
   </style>
 </head>
 <body>
   <main>
-    <header>
-      <p class="eyebrow">Cover Letter</p>
-      <h1>Recommendation for Ananda Moreira</h1>
-      <p class="identity">Written by Luis Cesar Pinheiro, Owner of LCPT Sistemas</p>
-      <div class="contact">
-        <span>LCPT Sistemas</span>
-        <span>Mentorship and production collaboration</span>
-      </div>
-    </header>
+    <h1>Technical Endorsement — Ananda Moreira</h1>
+    <p class="author">Luis Cesar Pinheiro — Owner, LCPT Sistemas</p>
 
     <article>
-      <p>I am Luis Cesar Pinheiro, owner of LCPT Sistemas, and I mentor Ananda Moreira directly in day-to-day delivery.</p>
+      <p>I am Luis Cesar Pinheiro, owner of LCPT Sistemas, and I mentor Ananda Moreira directly in day-to-day delivery. In production, Ananda builds backend services and document-heavy workflows that combine APIs, OCR, PDF processing, and Excel outputs. She has handled Flask and Python systems where the challenge is converting inconsistent input data into reliable operational results.</p>
 
-      <p>In production, Ananda builds backend services and document-heavy workflows that combine APIs, OCR, PDF processing, and Excel outputs. She has handled Flask and Python systems where the challenge is converting inconsistent input data into reliable operational results.</p>
-
-      <p>She works well with messy files, changing business rules, and external integrations that do not stay stable. She also stays with systems after deployment, including production debugging and maintenance when issues appear.</p>
-
-      <p>Her RAG work has been focused on system design, not chatbot packaging. She has been building retrieval scope, ingestion flow, citation handling, and backend ownership of prompts and model calls so behavior stays traceable and controlled.</p>
+      <p>She works well with messy files, changing business rules, and external integrations that do not stay stable. She also stays with systems after deployment, including production debugging and maintenance when issues appear. Her RAG work has been focused on system design, not chatbot packaging. She has been building retrieval scope, ingestion flow, citation handling, and backend ownership of prompts and model calls so behavior stays traceable and controlled.</p>
 
       <p>I have seen her technical growth in real client environments, and our mentorship is practical: review, iteration, and direct responsibility for outcomes.</p>
 
-      <p class="signoff">Signed:</p>
-      <p>Luis Cesar Pinheiro</p>
-      <p>Owner, LCPT Sistemas</p>
+      <div class="closing">
+        <p>Luis Cesar Pinheiro</p>
+        <p>Owner, LCPT Sistemas</p>
+      </div>
     </article>
   </main>
 </body>

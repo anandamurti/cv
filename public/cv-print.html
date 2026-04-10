@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ananda Moreira | Full Stack Developer | AI, RAG, Automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     @page {
       size: Letter;
@@ -11,15 +14,13 @@
     }
 
     :root {
-      color-scheme: light;
-      --paper: #f6f0e4;
-      --ink: #111824;
-      --muted: #505b69;
-      --line: rgba(17, 24, 36, 0.16);
-      --rail-a: #143855;
-      --rail-b: #23628f;
-      --accent: #f15a2a;
-      --panel: #fffdf8;
+      color-scheme: dark;
+      --bg: #0b0f14;
+      --panel: #121821;
+      --border: #1f2a36;
+      --text: #e6edf3;
+      --muted: #94a3b8;
+      --accent: #3b82f6;
     }
 
     * {
@@ -28,9 +29,9 @@
 
     body {
       margin: 0;
-      font-family: "Segoe UI", "Trebuchet MS", sans-serif;
-      background: var(--paper);
-      color: var(--ink);
+      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
 
     h1,
@@ -41,74 +42,171 @@
       margin: 0;
     }
 
+    ul {
+      padding-left: 14px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
     .sheet {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      column-gap: 0.08in;
+      row-gap: 0.13in;
+      padding: 0.1in;
+      border: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .masthead {
+      grid-column: 1 / -1;
+    }
+
+    .masthead-panel {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 0.1in;
+      padding: 0.12in;
+      border: 1px solid var(--border);
+      border-radius: 2px;
       background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 24px;
       overflow: hidden;
     }
 
-    .layout {
-      display: grid;
-      grid-template-columns: 2.15in 1fr;
-      min-height: 9.7in;
+    .masthead-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 16px 16px;
+      opacity: 0.16;
+      pointer-events: none;
     }
 
-    .sidebar {
-      padding: 0.24in;
-      background: linear-gradient(180deg, var(--rail-a), var(--rail-b));
-      color: #f7fbff;
+    .masthead-main,
+    .masthead-aside {
+      position: relative;
+      z-index: 1;
+    }
+
+    .masthead-main {
       display: grid;
       align-content: start;
-      gap: 0.18in;
+      gap: 0.05in;
+    }
+
+    .masthead h1 {
+      font-family: "Chivo", sans-serif;
+      font-size: 29px;
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+      color: var(--text);
+    }
+
+    .masthead .role {
+      font-size: 12px;
+      line-height: 1.3;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .meta {
+      display: grid;
+      gap: 4px;
+      font-size: 9.2px;
+      line-height: 1.35;
+      color: var(--muted);
+    }
+
+    .masthead-aside {
+      display: grid;
+      grid-template-columns: 0.82in 1fr;
+      gap: 0.08in;
+      align-items: start;
+      padding-left: 0.09in;
+      border-left: 1px solid var(--border);
     }
 
     .avatar {
-      width: 100%;
+      width: 0.82in;
       aspect-ratio: 4 / 5;
-      border-radius: 18px;
+      border-radius: 2px;
       object-fit: cover;
-      border: 1px solid rgba(255, 255, 255, 0.24);
-    }
-
-    .sidebar h1 {
-      font-size: 18px;
-      line-height: 1.05;
-      letter-spacing: 0.02em;
-    }
-
-    .sidebar .role {
-      margin-top: 6px;
-      font-size: 11px;
-      line-height: 1.35;
-      font-weight: 600;
-    }
-
-    .sidebar h2 {
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #d5ebff;
-      margin-bottom: 7px;
+      border: 1px solid var(--border);
     }
 
     .contact {
       display: grid;
-      gap: 6px;
-      font-size: 10px;
-      line-height: 1.35;
-      color: #eaf6ff;
+      gap: 3px;
+      padding: 0.06in;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      font-size: 8.8px;
+      line-height: 1.3;
+      color: var(--text);
     }
 
-    .contact a {
-      color: inherit;
-      text-decoration: none;
+    .contact a,
+    .contact span {
+      overflow-wrap: anywhere;
+    }
+
+    .panel {
+      position: relative;
+      display: grid;
+      gap: 0.05in;
+      padding: 0.1in;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      background: var(--panel);
+      break-inside: avoid;
+    }
+
+    .panel h2 {
+      margin-bottom: 0.04in;
+      padding-bottom: 0.03in;
+      border-bottom: 1px solid var(--border);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 8.9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    section.panel:nth-of-type(1) {
+      grid-column: 1 / 8;
+    }
+
+    section.panel:nth-of-type(2) {
+      grid-column: 8 / -1;
+    }
+
+    section.panel:nth-of-type(3) {
+      grid-column: 1 / -1;
+    }
+
+    section.panel:nth-of-type(4) {
+      grid-column: 1 / 8;
+    }
+
+    section.panel:nth-of-type(5) {
+      grid-column: 8 / -1;
+    }
+
+    section.panel:nth-of-type(6) {
+      grid-column: 1 / -1;
     }
 
     .tool-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 5px;
     }
 
     .tool-item {
@@ -116,164 +214,170 @@
       align-items: center;
       gap: 6px;
       min-height: 26px;
-      padding: 5px 6px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      font-size: 9px;
+      padding: 4px 6px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      background: var(--bg);
+      font-size: 8.1px;
       line-height: 1.2;
+      color: var(--text);
     }
 
     .tool-item img {
-      width: 14px;
-      height: 14px;
+      width: 12px;
+      height: 12px;
       object-fit: contain;
       flex: 0 0 auto;
     }
 
-    .main {
-      padding: 0.22in;
-      display: grid;
-      align-content: start;
-      gap: 0.14in;
-    }
-
-    .masthead {
-      border-bottom: 2px solid var(--ink);
-      padding-bottom: 0.11in;
-    }
-
-    .masthead h2 {
-      font-size: 28px;
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-    }
-
-    .masthead .role {
-      margin-top: 7px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--accent);
-    }
-
-    .meta {
-      margin-top: 8px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 14px;
-      font-size: 10px;
-      color: var(--muted);
-    }
-
-    section {
-      break-inside: avoid;
-    }
-
-    section h3 {
-      margin-bottom: 6px;
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
     .summary {
-      font-size: 10.3px;
-      line-height: 1.45;
-      color: #2f3845;
+      font-size: 9.2px;
+      line-height: 1.42;
+      color: var(--text);
     }
 
-    .feature {
-      padding: 11px 12px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(17, 24, 36, 0.97), rgba(17, 24, 36, 0.9));
-      color: #f8fbff;
-    }
-
-    .feature .head {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 5px;
-      font-size: 11px;
-    }
-
-    .feature .stack {
-      font-size: 9px;
-      margin-bottom: 6px;
-      color: #b2d6ff;
-    }
-
-    .feature ul,
-    .entry ul,
-    .system ul {
-      padding-left: 16px;
-      font-size: 9.9px;
-      line-height: 1.35;
-    }
-
-    .systems {
+    .feature,
+    .system,
+    .entry,
+    .edu-card {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      gap: 0.045in;
+      padding: 0.09in 0.1in;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      background: var(--bg);
+      color: var(--text);
     }
 
-    .system {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fff;
-      padding: 9px 10px;
-    }
-
+    .feature .head,
     .system .head,
     .entry .head {
       display: flex;
       justify-content: space-between;
-      gap: 10px;
+      gap: 0.08in;
       align-items: baseline;
-      margin-bottom: 4px;
-      font-size: 10px;
+      font-size: 9px;
+      padding-bottom: 0.03in;
+      border-bottom: 1px solid var(--border);
     }
 
+    .feature .head span,
+    .system .head span,
+    .entry .head span {
+      color: var(--accent);
+    }
+
+    .feature .stack,
     .system .stack,
     .entry .stack {
-      margin-bottom: 5px;
-      font-size: 8.7px;
+      padding: 5px 7px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      background: var(--panel);
       color: var(--muted);
+      font-size: 8.1px;
+      line-height: 1.22;
     }
 
+    .feature ul,
+    .system ul,
+    .entry ul {
+      display: grid;
+      gap: 2px;
+      font-size: 8.7px;
+      line-height: 1.32;
+      color: var(--text);
+    }
+
+    .systems,
     .experience {
       display: grid;
-      gap: 8px;
-    }
-
-    .entry {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fff;
-      padding: 9px 10px;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.07in;
     }
 
     .education {
       display: grid;
-      grid-template-columns: 1fr 0.72fr;
-      gap: 8px;
+      grid-template-columns: 0.95fr 1.3fr 0.75fr;
+      gap: 0.07in;
     }
 
     .edu-card {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 9px 10px;
-      background: #fff;
-      font-size: 9.9px;
-      line-height: 1.35;
+      font-size: 8.6px;
+      line-height: 1.33;
     }
 
     .edu-card strong {
       display: block;
-      font-size: 10.3px;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--border);
+      font-family: "Chivo", sans-serif;
+      font-size: 9.2px;
+      line-height: 1.18;
+      color: var(--text);
+    }
+
+    .credentials-list {
+      display: grid;
+      gap: 4px;
+      margin-top: 3px;
+    }
+
+    .credential-item {
+      display: grid;
+      gap: 1px;
+      padding: 3px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .credential-item:first-child {
+      border-top: 0;
+    }
+
+    .credential-item a {
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .credential-item span {
+      color: var(--muted);
+      line-height: 1.22;
+    }
+
+    @media (max-width: 900px) {
+      .sheet {
+        grid-template-columns: 1fr;
+      }
+
+      .masthead-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .masthead-aside {
+        grid-template-columns: 0.82in 1fr;
+        padding-left: 0;
+        padding-top: 0.08in;
+        border-left: 0;
+        border-top: 1px solid var(--border);
+      }
+
+      section.panel:nth-of-type(n) {
+        grid-column: 1;
+      }
+
+      .education {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .tool-grid,
+      .systems,
+      .experience,
+      .education {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media print {
@@ -286,17 +390,19 @@
 </head>
 <body>
   <main class="sheet">
-    <div class="layout">
-      <aside class="sidebar">
-        <img class="avatar" src="./profile.jpg" alt="Portrait of Ananda Moreira">
-
-        <div>
+    <header class="masthead">
+      <div class="masthead-panel">
+        <div class="masthead-main">
           <h1>Ananda Moreira</h1>
           <p class="role">Full Stack Developer | AI, RAG, Automation</p>
+          <div class="meta">
+            <span>Finance, insurance, and accounting systems</span>
+            <span>Full-stack delivery and local-first AI architecture</span>
+          </div>
         </div>
 
-        <div>
-          <h2>Contact</h2>
+        <div class="masthead-aside">
+          <img class="avatar" src="./profile.jpg" alt="Portrait of Ananda Moreira">
           <div class="contact">
             <span>Tremembe, Sao Paulo, Brazil</span>
             <span>+55 12 99120-5669</span>
@@ -305,159 +411,169 @@
             <a href="https://linkedin.com/in/ananda-murti-batista-moreira-837576326">linkedin.com/in/ananda-murti-batista-moreira-837576326</a>
           </div>
         </div>
-
-        <div>
-          <h2>Toolbelt</h2>
-          <div class="tool-grid">
-            <div class="tool-item"><img src="./assets/icons/python.svg" alt="Python"><span>Python</span></div>
-            <div class="tool-item"><img src="./assets/icons/flask.svg" alt="Flask"><span>Flask</span></div>
-            <div class="tool-item"><img src="./assets/icons/nodejs.svg" alt="Node.js"><span>Node.js</span></div>
-            <div class="tool-item"><img src="./assets/icons/typescript.svg" alt="TypeScript"><span>TypeScript</span></div>
-            <div class="tool-item"><img src="./assets/icons/javascript.svg" alt="JavaScript"><span>JavaScript</span></div>
-            <div class="tool-item"><img src="./assets/icons/nextjs.svg" alt="Next.js"><span>Next.js</span></div>
-            <div class="tool-item"><img src="./assets/icons/pandas.svg" alt="Pandas"><span>Pandas</span></div>
-            <div class="tool-item"><img src="./assets/icons/sqlite.svg" alt="SQLite"><span>SQLite</span></div>
-            <div class="tool-item"><img src="./assets/icons/linux.svg" alt="Linux"><span>Linux</span></div>
-            <div class="tool-item"><img src="./assets/icons/apache.svg" alt="Apache"><span>Apache</span></div>
-            <div class="tool-item"><img src="./assets/icons/aws.svg" alt="AWS"><span>AWS</span></div>
-            <div class="tool-item"><img src="./assets/icons/git.svg" alt="Git"><span>Git</span></div>
-            <div class="tool-item"><img src="./assets/icons/github.svg" alt="GitHub"><span>GitHub</span></div>
-            <div class="tool-item"><img src="./assets/icons/docker.svg" alt="Docker"><span>Docker</span></div>
-          </div>
-        </div>
-      </aside>
-
-      <div class="main">
-        <header class="masthead">
-          <h2>Ananda Moreira</h2>
-          <p class="role">Full Stack Developer | AI, RAG, Automation</p>
-          <div class="meta">
-            <span>Finance, insurance, and accounting systems</span>
-            <span>Full-stack delivery and local-first AI architecture</span>
-          </div>
-        </header>
-
-        <section>
-          <h3>Profile</h3>
-          <p class="summary">
-            Full-stack engineer building automation systems that combine APIs, PDF and OCR processing,
-            retrieval workflows, and production support. Practical delivery style: deterministic logic where required,
-            LLMs where useful, and full ownership after launch.
-          </p>
-        </section>
-
-        <section>
-          <h3>Flagship Build</h3>
-          <article class="feature">
-            <div class="head">
-              <strong>Local-first LLM automation platform</strong>
-              <span>Flagship</span>
-            </div>
-            <p class="stack">Next.js | Python API | Ollama | LanceDB | SQLite FTS</p>
-            <ul>
-              <li>Built authenticated uploads, immutable document versions, chunk manifests, and workspace-scoped retrieval.</li>
-              <li>Kept prompts, model calls, and validation in the backend to preserve control and traceability.</li>
-              <li>Designed a hybrid retrieval path combining exact-term recall and semantic search.</li>
-            </ul>
-          </article>
-        </section>
-
-        <section>
-          <h3>Production Systems</h3>
-          <div class="systems">
-            <article class="system">
-              <div class="head">
-                <strong>Portfolio PDF to Excel</strong>
-                <span>Finance</span>
-              </div>
-              <p class="stack">Camelot | Tabula | pdfplumber | OCR fallback | OpenPyXL</p>
-              <ul>
-                <li>Converted UBS-style statements into auditable workbooks.</li>
-                <li>Shipped single-file and batch execution flows.</li>
-              </ul>
-            </article>
-
-            <article class="system">
-              <div class="head">
-                <strong>Insurance premium automation</strong>
-                <span>API</span>
-              </div>
-              <p class="stack">Python services | Validation rules | Reporting</p>
-              <ul>
-                <li>Integrated insurer APIs and normalized changing payloads.</li>
-                <li>Kept reporting stable while external contracts evolved.</li>
-              </ul>
-            </article>
-
-            <article class="system">
-              <div class="head">
-                <strong>Client web and portal pipeline</strong>
-                <span>Full Stack</span>
-              </div>
-              <p class="stack">Node.js | Flask | Apache | DNS | NAT | cPanel</p>
-              <ul>
-                <li>Built public capture funnel and gated Flask experience.</li>
-                <li>Handled infrastructure setup and break-fix releases.</li>
-              </ul>
-            </article>
-
-            <article class="system">
-              <div class="head">
-                <strong>Cashflow desktop application</strong>
-                <span>Desktop</span>
-              </div>
-              <p class="stack">Python | PySide6 | QThread | Excel workflows</p>
-              <ul>
-                <li>Produced monthly workbooks from accounting input files.</li>
-                <li>Kept the UI responsive during long processing jobs.</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section>
-          <h3>Experience</h3>
-          <div class="experience">
-            <article class="entry">
-              <div class="head">
-                <strong>Full Stack Developer, LCPT Sistemas</strong>
-                <span>Oct 2024 - Present</span>
-              </div>
-              <ul>
-                <li>Build and maintain Flask apps, Python services, CLI tools, and internal automation software.</li>
-                <li>Deploy Linux-hosted systems with Apache and mod_wsgi and handle production debugging.</li>
-                <li>Implemented OCR-assisted extraction and reconciliation logic across various layouts.</li>
-              </ul>
-            </article>
-
-            <article class="entry">
-              <div class="head">
-                <strong>LLM Trainer and Evaluator, Outlier</strong>
-                <span>Concurrent</span>
-              </div>
-              <ul>
-                <li>Evaluate model outputs for reasoning quality, factual consistency, and instruction-following.</li>
-                <li>Use that evaluation discipline to design safer, more deterministic product behavior.</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section>
-          <h3>Education and Languages</h3>
-          <div class="education">
-            <article class="edu-card">
-              <strong>B.S. Computer Science, Magna Cum Laude</strong>
-              <span>University of the People, 2026</span>
-            </article>
-            <article class="edu-card">
-              <strong>Languages</strong>
-              <span>English, Portuguese</span>
-            </article>
-          </div>
-        </section>
       </div>
-    </div>
+    </header>
+
+    <section class="panel">
+      <h2>Toolbelt</h2>
+      <div class="tool-grid">
+        <div class="tool-item"><img src="./assets/icons/python.svg" alt="Python"><span>Python</span></div>
+        <div class="tool-item"><img src="./assets/icons/flask.svg" alt="Flask"><span>Flask</span></div>
+        <div class="tool-item"><img src="./assets/icons/nodejs.svg" alt="Node.js"><span>Node.js</span></div>
+        <div class="tool-item"><img src="./assets/icons/typescript.svg" alt="TypeScript"><span>TypeScript</span></div>
+        <div class="tool-item"><img src="./assets/icons/javascript.svg" alt="JavaScript"><span>JavaScript</span></div>
+        <div class="tool-item"><img src="./assets/icons/nextjs.svg" alt="Next.js"><span>Next.js</span></div>
+        <div class="tool-item"><img src="./assets/icons/pandas.svg" alt="Pandas"><span>Pandas</span></div>
+        <div class="tool-item"><img src="./assets/icons/sqlite.svg" alt="SQLite"><span>SQLite</span></div>
+        <div class="tool-item"><img src="./assets/icons/linux.svg" alt="Linux"><span>Linux</span></div>
+        <div class="tool-item"><img src="./assets/icons/apache.svg" alt="Apache"><span>Apache</span></div>
+        <div class="tool-item"><img src="./assets/icons/aws.svg" alt="AWS"><span>AWS</span></div>
+        <div class="tool-item"><img src="./assets/icons/git.svg" alt="Git"><span>Git</span></div>
+        <div class="tool-item"><img src="./assets/icons/github.svg" alt="GitHub"><span>GitHub</span></div>
+        <div class="tool-item"><img src="./assets/icons/docker.svg" alt="Docker"><span>Docker</span></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Profile</h2>
+      <p class="summary">
+        Full-stack engineer building automation systems that combine APIs, PDF and OCR processing,
+        retrieval workflows, and production support. Practical delivery style: deterministic logic where required,
+        LLMs where useful, and full ownership after launch.
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>Flagship Build</h2>
+      <article class="feature">
+        <div class="head">
+          <strong>Local-first LLM automation platform</strong>
+          <span>Flagship</span>
+        </div>
+        <p class="stack">Next.js | Python API | Ollama | LanceDB | SQLite FTS</p>
+        <ul>
+          <li>Built authenticated uploads, immutable document versions, chunk manifests, and workspace-scoped retrieval.</li>
+          <li>Kept prompts, model calls, and validation in the backend to preserve control and traceability.</li>
+          <li>Designed a hybrid retrieval path combining exact-term recall and semantic search.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Production Systems</h2>
+      <div class="systems">
+        <article class="system">
+          <div class="head">
+            <strong>Portfolio PDF to Excel</strong>
+            <span>Finance</span>
+          </div>
+          <p class="stack">Camelot | Tabula | pdfplumber | OCR fallback | OpenPyXL</p>
+          <ul>
+            <li>Converted UBS-style statements into auditable workbooks.</li>
+            <li>Shipped single-file and batch execution flows.</li>
+          </ul>
+        </article>
+
+        <article class="system">
+          <div class="head">
+            <strong>Insurance premium automation</strong>
+            <span>API</span>
+          </div>
+          <p class="stack">Python services | Validation rules | Reporting</p>
+          <ul>
+            <li>Integrated insurer APIs and normalized changing payloads.</li>
+            <li>Kept reporting stable while external contracts evolved.</li>
+          </ul>
+        </article>
+
+        <article class="system">
+          <div class="head">
+            <strong>Client web and portal pipeline</strong>
+            <span>Full Stack</span>
+          </div>
+          <p class="stack">Node.js | Flask | Apache | DNS | NAT | cPanel</p>
+          <ul>
+            <li>Built public capture funnel and gated Flask experience.</li>
+            <li>Handled infrastructure setup and break-fix releases.</li>
+          </ul>
+        </article>
+
+        <article class="system">
+          <div class="head">
+            <strong>Cashflow desktop application</strong>
+            <span>Desktop</span>
+          </div>
+          <p class="stack">Python | PySide6 | QThread | Excel workflows</p>
+          <ul>
+            <li>Produced monthly workbooks from accounting input files.</li>
+            <li>Kept the UI responsive during long processing jobs.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Experience</h2>
+      <div class="experience">
+        <article class="entry">
+          <div class="head">
+            <strong>Full Stack Developer, LCPT Sistemas</strong>
+            <span>Oct 2024 - Present</span>
+          </div>
+          <ul>
+            <li>Build and maintain Flask apps, Python services, CLI tools, and internal automation software.</li>
+            <li>Deploy Linux-hosted systems with Apache and mod_wsgi and handle production debugging.</li>
+            <li>Implemented OCR-assisted extraction and reconciliation logic across various layouts.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="head">
+            <strong>LLM Trainer and Evaluator, Outlier</strong>
+            <span>Concurrent</span>
+          </div>
+          <ul>
+            <li>Evaluate model outputs for reasoning quality, factual consistency, and instruction-following.</li>
+            <li>Use that evaluation discipline to design safer, more deterministic product behavior.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Education, Certifications, and Languages</h2>
+      <div class="education">
+        <article class="edu-card">
+          <strong>B.S. Computer Science, Magna Cum Laude</strong>
+          <span>University of the People, 2026</span>
+        </article>
+        <article class="edu-card">
+          <strong>Certifications</strong>
+          <div class="credentials-list">
+            <div class="credential-item">
+              <a href="https://verify.skilljar.com/c/zj7tcfqkp835">Anthropic | AI Fluency Framework &amp; Foundations</a>
+              <span>Issued Mar 2026 | Code zj7tcfqkp835</span>
+            </div>
+            <div class="credential-item">
+              <a href="https://www.hackerrank.com/certificates/b7a07d12a317">HackerRank | Node.js (Intermediate)</a>
+              <span>Issued Apr 2026 | Code b7a07d12a317</span>
+            </div>
+            <div class="credential-item">
+              <a href="https://alison.com/certification/check/ec35c4f195">Alison | Python-Flask diploma</a>
+              <span>Issued May 2025 | Code ec35c4f195</span>
+            </div>
+            <div class="credential-item">
+              <a href="https://alison.com/certification/check/655b518dc2">Alison | SQL for Beginners</a>
+              <span>Issued Mar 2025 | Code 655b518dc2</span>
+            </div>
+          </div>
+        </article>
+        <article class="edu-card">
+          <strong>Languages</strong>
+          <span>English, Portuguese</span>
+        </article>
+      </div>
+    </section>
   </main>
 </body>
 </html>
