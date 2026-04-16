@@ -715,21 +715,10 @@ img {
 
 .tool-group {
   position: relative;
+  grid-column: span 4;
   padding: 20px;
   background: var(--card);
   transition: border-color 140ms ease, opacity 140ms ease;
-}
-
-.tool-group:nth-child(1) {
-  grid-column: span 5;
-}
-
-.tool-group:nth-child(2) {
-  grid-column: span 4;
-}
-
-.tool-group:nth-child(3) {
-  grid-column: span 3;
 }
 
 .tool-group h3 {
@@ -741,14 +730,6 @@ img {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-}
-
-.tool-group:nth-child(1) .tool-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.tool-group:nth-child(3) .tool-grid {
-  grid-template-columns: 1fr;
 }
 
 .tool-pill {
@@ -993,9 +974,7 @@ img {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .tool-group:nth-child(1),
-  .tool-group:nth-child(2),
-  .tool-group:nth-child(3) {
+  .tool-group {
     grid-column: span 6;
   }
 
@@ -1077,7 +1056,6 @@ img {
     justify-content: flex-start;
   }
 
-  .tool-group:nth-child(1) .tool-grid,
   .tool-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1105,8 +1083,7 @@ img {
     width: 100%;
   }
 
-  .tool-grid,
-  .tool-group:nth-child(1) .tool-grid {
+  .tool-grid {
     grid-template-columns: 1fr;
   }
 

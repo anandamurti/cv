@@ -11,17 +11,18 @@ Full-stack engineer with experience designing, building, and operating productio
 
 Delivered real systems used in finance and insurance environments, including document processing pipelines, API integrations, and dashboard applications. Systems are actively used in production with sustained stability and minimal maintenance.
 
+Systems running in production for 12+ months with sustained stability.
+
 Looking to join a collaborative engineering team to deepen experience in scalable systems, architecture patterns, and peer-reviewed development.
 
 TECHNICAL SKILLS
 
 Backend: Python, Flask, Node.js
 Frontend: JavaScript, TypeScript, Next.js, HTML, CSS
-Data and AI: Pandas, OCR (Tesseract), Retrieval Systems, TF-IDF, RAG, PDF processing
-Databases: MySQL, SQL Server, SQLite
-Infrastructure: Linux, Apache, mod_wsgi, Docker, AWS
-Engineering: Git branching, CLI tools, logging, validation pipelines, production debugging
-Tooling: Pytest, Ruff, OpenPyXL, pdfplumber, Camelot, Tabula
+Data & AI: Pandas, OCR, RAG, TF-IDF
+Databases: MySQL, SQLite, SQL Server
+Infrastructure: Linux, Apache, Docker, AWS
+Engineering: Git, GitHub, CLI, Logging, Validation
 
 EXPERIENCE
 
