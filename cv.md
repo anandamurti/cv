@@ -1,90 +1,144 @@
-# Ananda Moreira
+ANANDA MOREIRA
+Full Stack Engineer | Production Systems | AI & Automation
+São Paulo, Brazil | +55 12 99120-5669
+anandaanandamurti@gmail.com
 
-Tremembe, Sao Paulo, Brazil  
-+55 12 99120-5669  
-[anandaanandamurti@gmail.com](mailto:anandaanandamurti@gmail.com)  
-[GitHub](https://github.com/anandamurti) | [LinkedIn](https://linkedin.com/in/ananda-murti-batista-moreira-837576326) | [Portfolio](https://anandamurti.github.io/cv/)
+github.com/anandamurti | linkedin.com/in/ananda-murti-batista-moreira-837576326
 
-## Identity
+PROFESSIONAL SUMMARY
 
-Full Stack Developer | AI, RAG, Automation
+Full-stack engineer with experience designing, building, and operating production systems end-to-end as a sole developer. Focused on automation platforms, financial data pipelines, and API-driven systems combining deterministic logic with modern AI workflows.
 
-## Tools I Use
+Delivered real systems used in finance and insurance environments, including document processing pipelines, API integrations, and dashboard applications. Systems are actively used in production with sustained stability and minimal maintenance.
 
-- Languages: Python, JavaScript, Java, SQL, HTML/CSS
-- Backend / Full stack: Flask, Node.js, REST APIs, SQLAlchemy, CRUD systems, server-rendered web apps, Next.js, TypeScript, authentication flows
-- AI / Retrieval: RAG, Ollama integration, structured LLM outputs, chunking, embeddings, LanceDB, SQLite / FTS architecture
-- Data / Automation: Pandas, OpenPyXL, PDF extraction, OCR workflows, Google Document AI, Excel generation, CLI tooling
-- Desktop and UI: PySide6, QThread, responsive interfaces, localized business tooling
-- Databases and Platforms: SQLite, MySQL, MongoDB, Linux, Windows
-- Infra / Deployment: Apache, mod_wsgi, AWS, SSL/TLS, DNS, NAT, cPanel, Git, GitHub, GitHub Pages
+Looking to join a collaborative engineering team to deepen experience in scalable systems, architecture patterns, and peer-reviewed development.
 
-## Systems
+TECHNICAL SKILLS
 
-### Local-First LLM Automation Platform
-*Next.js, TypeScript, Python, Ollama, LanceDB, SQLite*
+Backend: Python, Flask, Node.js
+Frontend: JavaScript, TypeScript, Next.js, HTML, CSS
+Data and AI: Pandas, OCR (Tesseract), Retrieval Systems, TF-IDF, RAG, PDF processing
+Databases: MySQL, SQL Server, SQLite
+Infrastructure: Linux, Apache, mod_wsgi, Docker, AWS
+Engineering: Git branching, CLI tools, logging, validation pipelines, production debugging
+Tooling: Pytest, Ruff, OpenPyXL, pdfplumber, Camelot, Tabula
 
-- Built the first working slice of a local-first RAG platform with a Next.js UI, a Python API, a worker-style ingestion path, and a loopback-only Ollama runtime.
-- Kept retrieval, prompts, and model calls in the backend. Implemented authenticated uploads, immutable document versions, chunk manifests, workspace-scoped LanceDB storage, and citation-aware chat streaming with structured Ollama output.
-- The target retrieval path is hybrid: SQLite FTS for exact terms, LanceDB for semantic recall. Added retrieval scoping and local-only policy checks to keep the browser away from the model and prevent cross-workspace leaks.
+EXPERIENCE
 
-### Portfolio PDF to Excel Automation Platform
-*Python, Camelot, Tabula, pdfplumber, Google Document AI, OpenPyXL*
+Full Stack Engineer (Sole Developer)
+LCPT Sistemas — Brazil
+Oct 2024 – Present
 
-- Built a Python pipeline that turns UBS-style portfolio statements into Excel workbooks ready for accounting review.
-- Used Camelot, Tabula, pdfplumber, and Google Document AI as fallback because one parser was not enough for real statements.
-- Added batch and single-file CLI modes, summary sheets, diagnostics, and JSON run reports for audit and validation.
+Responsible for architecture, development, deployment, and maintenance of multiple production systems in finance and insurance domains.
 
-### Insurance Premium Automation Platform
-*Python, REST APIs, Excel automation*
+Built and maintained end-to-end pipelines integrating data ingestion, validation, API processing, reporting, and user interfaces.
 
-- Built Python services around insurer APIs, validation rules, and reporting flows used for premium calculation.
-- Normalized insurer-specific responses before feeding them into internal CRUD and Excel reporting flows.
-- Kept the system running as API contracts and business rules changed.
+Developed systems used by accountants and business users in real operational workflows, with sustained production stability and minimal maintenance over extended periods.
 
-### Client Acquisition and Flask Portal Pipeline
-*Node.js, Flask, Apache, DNS, NAT, cPanel*
+Collaborated directly with accounting stakeholders to translate financial workflows into automated and auditable systems.
 
-- Built a public Node.js site for interactive lead capture, then connected it to a Flask portal for login, registration, and gated access.
-- Set up Apache, DNS, NAT, and cPanel so both apps stayed reachable and routed correctly in production.
-- Handled releases and break-fix work across both sides once it was live.
+Managed infrastructure and deployments using Linux, Apache, and mod_wsgi, including production debugging and system updates.
 
-### Cashflow Desktop Application
-*Python, PySide6, QThread, Excel automation*
+Insurance Premium Automation Platform
 
-- Built a Windows desktop application that transforms one or more Excel inputs into a monthly cashflow workbook for an accounting client.
-- Moved long-running workbook generation onto QThread so the UI stayed usable.
-- Added validation, monthly mappings, dropdown generation, and packaged builds for day-to-day client use.
+Designed and implemented a system integrating internal CRUD applications with external insurance APIs for premium calculation.
 
-## Work
+Built ingestion and normalization pipelines to handle insurer-specific responses and changing API contracts.
 
-### Full Stack Developer
-**LCPT Sistemas** | Oct 2024 - Present
+Implemented a status-driven workflow to ensure reliable processing, reprocessing, and auditability of requests.
 
-- Build Flask apps, Python services, CLI tools, and desktop utilities for finance, insurance, and accounting workflows.
-- Turn PDFs, bank statements, insurer data, and Excel inputs into structured outputs teams can review, export, and use downstream.
-- Deploy and debug Linux-hosted applications running on Apache and mod_wsgi, with SQL databases, DNS/NAT configuration, and the usual environment issues.
-- Implemented OCR-assisted extraction, normalization for various layouts, and deterministic plus BM25-style matching for reconciliation.
-- Keep systems usable after client rules change, third-party APIs shift, or something breaks in production.
+Developed reporting pipelines generating standardized Excel outputs for business use.
 
-### LLM Trainer and Evaluator
-**Outlier** | Concurrent contract
+Financial Data and Document Automation Systems
 
-- Reviewed model outputs for reasoning quality, instruction-following, and factual consistency across varied tasks.
-- That work made me stricter about where LLMs help and where you still want schemas, validation, and deterministic code.
+Built document processing pipelines converting PDF financial statements into structured Excel outputs.
 
-## Education
+Developed support for multiple bank formats using deterministic parsing combined with OCR fallback.
 
-**Bachelor of Science in Computer Science, Magna Cum Laude**  
-University of the People | 2026
+Engineered reconciliation systems using rule-based logic and fuzzy matching to validate financial data.
 
-## Certificates
+Generated auditable outputs highlighting matched and unmatched records for accounting workflows.
 
-- [Anthropic | AI Fluency Framework & Foundations](https://verify.skilljar.com/c/zj7tcfqkp835) (Issued Mar 2026 | Code: zj7tcfqkp835)
-- [HackerRank | Node.js (Intermediate)](https://www.hackerrank.com/certificates/b7a07d12a317) (Issued Apr 2026 | Code: b7a07d12a317)
-- [Alison | Python-Flask diploma](https://alison.com/certification/check/ec35c4f195) (Issued May 2025 | Code: ec35c4f195)
-- [Alison | SQL for Beginners](https://alison.com/certification/check/655b518dc2) (Issued Mar 2025 | Code: 655b518dc2)
+Bank Statement Conversion Platform
 
-## Languages
+Designed and deployed a web application standardizing file intake and naming for accounting operations.
 
-English, Portuguese
+Integrated metadata-driven workflows to enforce consistency and reduce human error.
+
+Implemented deterministic file renaming and validation logic.
+
+Deployed using Apache and mod_wsgi, supporting real-world usage for over one year.
+
+Insurance Dashboard and Data Systems
+
+Built Flask-based dashboard applications for viewing and exporting calculation results.
+
+Implemented bulk Excel ingestion, inline editing, and API synchronization workflows.
+
+Separated ingestion, processing, and visualization layers for maintainability.
+
+Delivered interfaces designed for accountant workflows with clear status tracking and audit visibility.
+
+Company Website and Backend Services
+
+Rebuilt and deployed company website with integrated backend services.
+
+Implemented APIs for form handling, session tracking, and client-side logging.
+
+Developed logging pipelines to capture frontend errors and user activity.
+
+Integrated multiple applications into a single production environment.
+
+PROJECTS
+
+Local-First AI RAG Platform
+
+Built a document-centric system with ingestion, chunking, embedding, and retrieval workflows.
+
+Implemented backend-controlled logic ensuring traceability, validation, and controlled model interaction.
+
+Designed hybrid retrieval combining exact-term search and semantic search.
+
+Information Retrieval Engine
+
+Developed a full pipeline including crawling, indexing, and ranked retrieval using TF-IDF and cosine similarity.
+
+Built a persistent inverted index using SQLite.
+
+Implemented query processing with vector-space ranking.
+
+OCR and Document Processing Tools
+
+Built command-line systems for batch OCR processing of PDFs.
+
+Implemented logging, error handling, and configurable pipelines.
+
+Designed tools to handle non-searchable financial documents reliably.
+
+Cashflow Desktop Application
+
+Developed a Python desktop application for financial data processing.
+
+Implemented background processing to maintain a responsive interface.
+
+Generated structured monthly reports from raw accounting inputs.
+
+EDUCATION
+
+Bachelor of Science in Computer Science, Magna Cum Laude
+University of the People — 2026
+
+CERTIFICATIONS
+
+AI Fluency Framework and Foundations — Anthropic
+Node.js (Intermediate) — HackerRank
+Python-Flask Diploma — Alison
+SQL for Beginners — Alison
+
+ADDITIONAL INFORMATION
+
+Raised in India and educated in an English-language academic system.
+Lived in Hong Kong for 6 years.
+Native-level English proficiency.
+Cross-cultural communication experience.
+Early exposure to system-level thinking contributing to building robust and auditable systems.

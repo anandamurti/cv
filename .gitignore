@@ -1,3 +1,6 @@
 ﻿node_modules/
 dist/
 cv/versions/
+
+# Temporary browser profiles generated during local PDF/export runs.
+.edge-*/
