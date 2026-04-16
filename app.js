@@ -65,8 +65,9 @@ function initRevealOnScroll() {
     },
     {
       root: null,
-      threshold: 0.14,
-      rootMargin: "0px 0px -12% 0px"
+      // Use a tiny threshold so tall sections still reveal on short mobile viewports.
+      threshold: 0.01,
+      rootMargin: "0px 0px -8% 0px"
     }
   );
 
